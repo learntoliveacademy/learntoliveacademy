@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO META ============ -->
+  <title>Learn To Live Academy | প্রিমিয়াম টিউশন একাডেমি</title>
+  <meta name="description" content="Learn To Live Academy — একটি প্রিমিয়াম টিউশন একাডেমি। অভিজ্ঞ শিক্ষক, কার্যকরী কোর্স এবং সাফল্যের নিশ্চয়তা। হোয়াটসঅ্যাপে আজই যোগাযোগ করুন।" />
+  <meta name="keywords" content="Learn To Live Academy, টিউশন একাডেমি, শিক্ষক, কোর্স, পড়াশোনা, বাংলা টিউশন" />
+  <meta name="author" content="Learn To Live Academy" />
+  <meta name="theme-color" content="#0d1b3e" />
+
+  <!-- ============ OPEN GRAPH ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Learn To Live Academy | প্রিমিয়াম টিউশন একাডেমি" />
+  <meta property="og:description" content="অভিজ্ঞ শিক্ষক, কার্যকরী কোর্স এবং সাফল্যের নিশ্চয়তা। হোয়াটসঅ্যাপে আজই যোগাযোগ করুন।" />
+  <meta property="og:image" content="assets/images/logo.png" />
+  <meta property="og:locale" content="bn_BD" />
+
+  <!-- ============ FAVICON (inline SVG to avoid 404) ============ -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1b3e'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='34' font-weight='bold' text-anchor='middle' fill='%23c9a961'%3EL%3C/text%3E%3C/svg%3E" />
+
+  <!-- ============ FONTS (Bengali + Latin) ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ============ EARLY THEME SCRIPT (prevent FOUC) ============ -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('l2l-theme');
+        if (t !== 'dark' && t !== 'light') {
+          t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <style>
+    /* ============================================================
+       LEARN TO LIVE ACADEMY — STYLESHEET
+       Premium educational design with Dark/Light theme support
+       Palette: Deep Navy / White / Light Gray / Gold accent
+       ============================================================ */
+
+    /* ---------- 1. CSS RESET & BASE ---------- */
+    *,
+    *::before,
+    *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Brand colors — same in both themes */
+      --navy:        #0d1b3e;
+      --navy-2:      #14264f;
+      --navy-3:      #1e3266;
+      --navy-soft:   #28407a;
+      --gold:        #c9a961;
+      --gold-light:  #e0c97d;
+      --gold-dark:   #a8884a;
+      --gold-soft:   rgba(201, 169, 97, 0.12);
+      --whatsapp:    #25d366;
+      --whatsapp-d:  #1da851;
+
+      /* Semantic colors — LIGHT theme defaults */
+      --bg:          #ffffff;
+      --bg-alt:      #f5f7fa;
+      --bg-card:     #ffffff;
+      --bg-toggle:   #f1f5f9;
+      --bg-elevated: #ffffff;
+      --heading:     #0d1b3e;
+      --text:        #1e293b;
+      --text-soft:   #475569;
+      --border:      #e2e8f0;
+      --border-soft: #f1f5f9;
+      --nav-bg:      rgba(255, 255, 255, 0.96);
+      --nav-border:  #e2e8f0;
+      --gray-100:    #f1f5f9;
+      --gray-200:    #e2e8f0;
+      --gray-300:    #cbd5e1;
+      --gray-400:    #94a3b8;
+      --gray-500:    #64748b;
+      --gray-700:    #334155;
+
+      /* Navy section treatment (hero/success/footer — always dark) */
+      --navy-section-bg: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+
+      /* Shadows */
+      --shadow-sm:   0 1px 3px rgba(13, 27, 62, 0.08);
+      --shadow-md:   0 6px 22px rgba(13, 27, 62, 0.10);
+      --shadow-lg:   0 22px 55px rgba(13, 27, 62, 0.18);
+      --shadow-gold: 0 10px 30px rgba(201, 169, 97, 0.28);
+
+      /* Radii */
+      --radius:      14px;
+      --radius-lg:   22px;
+      --radius-pill: 999px;
+
+      /* Layout */
+      --container:   1200px;
+      --nav-h:       76px;
+
+      /* Motion */
+      --t:           0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      --t-slow:      0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ---------- DARK THEME OVERRIDES ---------- */
+    [data-theme="dark"] {
+      --bg:          #0a1024;
+      --bg-alt:      #0d1530;
+      --bg-card:     #131f44;
+      --bg-toggle:   #1a2547;
+      --bg-elevated: #16244d;
+      --heading:     #ffffff;
+      --text:        #e8edf5;
+      --text-soft:   #a8b5cc;
+      --border:      #283358;
+      --border-soft: #1e2a4a;
+      --nav-bg:      rgba(10, 16, 36, 0.94);
+      --nav-border:  #283358;
+      --gray-100:    #1a2547;
+      --gray-200:    #283358;
+      --gray-300:    #3b4870;
+      --gray-400:    #64748b;
+      --gray-500:    #94a3b8;
+      --gray-700:    #cbd5e1;
+
+      --navy-section-bg: linear-gradient(135deg, #0d1b3e 0%, #14264f 100%);
+
+      --shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.25);
+      --shadow-md:   0 6px 22px rgba(0, 0, 0, 0.35);
+      --shadow-lg:   0 22px 55px rgba(0, 0, 0, 0.5);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-h);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Noto Sans Bengali', 'Hind Siliguri', 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background var(--t), color var(--t);
+    }
+
+    /* When English is active, prefer Inter for crisper Latin glyphs */
+    html[lang="en"] body {
+      font-family: 'Inter', 'Noto Sans Bengali', system-ui, sans-serif;
+    }
+    html[lang="en"] h1,
+    html[lang="en"] h2,
+    html[lang="en"] h3,
+    html[lang="en"] h4,
+    html[lang="en"] h5 {
+      font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
+    }
+
+    img { max-width: 100%; display: block; }
+    a   { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+    ul  { list-style: none; }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Noto Sans Bengali', 'Hind Siliguri', sans-serif;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--heading);
+      letter-spacing: -0.01em;
+    }
+
+    /* Visible focus for keyboard accessibility */
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 12px;
+      background: var(--navy);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      z-index: 2000;
+      transition: top 0.25s;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* ---------- 2. LAYOUT HELPERS ---------- */
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 92px 0;
+      position: relative;
+    }
+    .section--light   { background: var(--bg-alt); }
+    .section--white   { background: var(--bg); }
+    .section--navy    { background: var(--navy-section-bg); color: #fff; }
+    .section--navy h2,
+    .section--navy h3 { color: #fff; }
+
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      padding: 6px 16px;
+      background: var(--gold-soft);
+      border-radius: var(--radius-pill);
+      margin-bottom: 18px;
+    }
+    [data-theme="dark"] .section-eyebrow { color: var(--gold-light); }
+    .section--navy .section-eyebrow {
+      color: var(--gold-light);
+      background: rgba(201, 169, 97, 0.15);
+    }
+    .section-title { font-size: clamp(1.7rem, 4vw, 2.5rem); margin-bottom: 14px; }
+    .section-subtitle {
+      font-size: 1.02rem;
+      color: var(--text-soft);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .section--navy .section-subtitle { color: rgba(255,255,255,0.78); }
+
+    /* ---------- 3. BUTTONS ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 26px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: 0.96rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform var(--t), box-shadow var(--t), background var(--t), color var(--t);
+      white-space: nowrap;
+      text-align: center;
+    }
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .btn:active { transform: translateY(1px); }
+
+    .btn--gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: var(--navy);
+      box-shadow: var(--shadow-gold);
+    }
+    .btn--gold:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(201,169,97,0.42); }
+
+    .btn--navy {
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow-md);
+    }
+    .btn--navy:hover { background: var(--navy-2); transform: translateY(-2px); }
+
+    .btn--outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    .btn--outline:hover { border-color: var(--gold); color: var(--gold-light); }
+
+    .btn--whatsapp {
+      background: var(--whatsapp);
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(37, 211, 102, 0.32);
+    }
+    .btn--whatsapp:hover { background: var(--whatsapp-d); transform: translateY(-2px); }
+
+    .btn--ghost {
+      background: var(--bg-toggle);
+      color: var(--heading);
+    }
+    .btn--ghost:hover { background: var(--gray-200); }
+
+    .btn[disabled] { opacity: 0.5; pointer-events: none; }
+
+    /* ---------- 4. NAVBAR ---------- */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: var(--nav-bg);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      z-index: 1000;
+      transition: box-shadow var(--t), background var(--t), border-color var(--t);
+      border-bottom: 1px solid transparent;
+    }
+    .nav.scrolled {
+      box-shadow: 0 6px 24px rgba(13, 27, 62, 0.08);
+      border-bottom-color: var(--nav-border);
+    }
+    [data-theme="dark"] .nav.scrolled { box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .nav-logo {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: var(--navy);
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-logo-fallback {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-3));
+      color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.3rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .nav-brand-name {
+      font-size: 1.06rem; font-weight: 700; color: var(--heading);
+    }
+    .nav-brand-tag {
+      font-size: 0.72rem; color: var(--gold-dark); font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    [data-theme="dark"] .nav-brand-tag { color: var(--gold-light); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-link {
+      position: relative;
+      padding: 10px 16px;
+      font-weight: 500;
+      font-size: 0.96rem;
+      color: var(--text-soft);
+      border-radius: 8px;
+      transition: color var(--t), background var(--t);
+    }
+    .nav-link:hover { color: var(--heading); background: var(--bg-toggle); }
+    .nav-link.active { color: var(--heading); font-weight: 600; }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      left: 16px; right: 16px; bottom: 4px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 2px;
+    }
+
+    .nav-cta { display: flex; align-items: center; gap: 10px; }
+    .nav-cta .btn { padding: 11px 20px; font-size: 0.9rem; }
+
+    /* ---------- 4b. THEME + LANGUAGE TOGGLES ---------- */
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      background: var(--bg-toggle);
+      border-radius: var(--radius-pill);
+      padding: 3px;
+      gap: 2px;
+      border: 1px solid var(--border);
+    }
+    .lang-btn {
+      padding: 6px 13px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-radius: var(--radius-pill);
+      color: var(--text-soft);
+      transition: background var(--t), color var(--t);
+      letter-spacing: 0.03em;
+    }
+    .lang-btn:hover { color: var(--heading); }
+    .lang-btn[aria-pressed="true"] {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .theme-toggle {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--bg-toggle);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--heading);
+      position: relative;
+      transition: background var(--t), border-color var(--t), transform var(--t);
+    }
+    .theme-toggle:hover { transform: rotate(-12deg); border-color: var(--gold); }
+    .theme-toggle svg {
+      position: absolute;
+      width: 20px; height: 20px;
+      transition: opacity var(--t), transform var(--t);
+    }
+    /* Default (light): show moon icon */
+    .theme-toggle .icon-sun  { opacity: 0; transform: rotate(-90deg) scale(0.4); }
+    .theme-toggle .icon-moon { opacity: 1; transform: rotate(0) scale(1); }
+    /* Dark: show sun icon */
+    [data-theme="dark"] .theme-toggle .icon-sun  { opacity: 1; transform: rotate(0) scale(1); }
+    [data-theme="dark"] .theme-toggle .icon-moon { opacity: 0; transform: rotate(90deg) scale(0.4); }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-toggle);
+      border: 1px solid var(--border);
+    }
+    .nav-toggle:hover { background: var(--gray-200); }
+    .nav-toggle span {
+      display: block;
+      position: relative;
+      width: 22px; height: 2px;
+      background: var(--heading);
+      border-radius: 2px;
+      transition: transform var(--t), opacity var(--t), top var(--t);
+    }
+    .nav-toggle span + span { margin-top: 5px; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: var(--nav-h);
+      right: 0;
+      width: min(340px, 86vw);
+      height: calc(100vh - var(--nav-h));
+      background: var(--bg);
+      box-shadow: -20px 0 60px rgba(13, 27, 62, 0.18);
+      transform: translateX(100%);
+      transition: transform var(--t);
+      z-index: 999;
+      padding: 24px 22px 40px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border-left: 1px solid var(--border);
+    }
+    [data-theme="dark"] .mobile-menu { box-shadow: -20px 0 60px rgba(0,0,0,0.5); }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-weight: 500;
+      color: var(--text-soft);
+      transition: background var(--t), color var(--t);
+    }
+    .mobile-menu a:hover { background: var(--bg-toggle); color: var(--heading); }
+    .mobile-menu a.active { background: var(--gold-soft); color: var(--heading); font-weight: 600; }
+    .mobile-menu .btn { width: 100%; margin-top: 14px; }
+
+    .mobile-menu .menu-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 6px 16px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .mobile-menu .menu-controls .lang-toggle { flex: 1; }
+    .mobile-menu .menu-controls .lang-btn { flex: 1; text-align: center; }
+
+    .menu-backdrop {
+      position: fixed;
+      inset: var(--nav-h) 0 0 0;
+      background: rgba(13, 27, 62, 0.45);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--t), visibility var(--t);
+      z-index: 998;
+    }
+    .menu-backdrop.open { opacity: 1; visibility: visible; }
+
+    body.menu-open { overflow: hidden; }
+
+    /* ---------- 5. HERO SLIDER ---------- */
+    .hero {
+      position: relative;
+      min-height: clamp(560px, 92vh, 860px);
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, var(--navy-3) 100%);
+      margin-top: var(--nav-h);
+    }
+    .hero-bg-layer {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity var(--t-slow);
+      will-change: opacity;
+    }
+    .hero-bg-layer.active { opacity: 1; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(100deg, rgba(13,27,62,0.92) 0%, rgba(13,27,62,0.78) 45%, rgba(13,27,62,0.55) 100%);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 60px 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content { position: relative; min-height: 280px; }
+    .hero-slide-text {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity var(--t-slow), transform var(--t-slow);
+      pointer-events: none;
+    }
+    .hero-slide-text.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+      position: relative;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      background: rgba(201, 169, 97, 0.18);
+      border: 1px solid rgba(201, 169, 97, 0.35);
+      color: var(--gold-light);
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      color: #fff;
+      font-size: clamp(2rem, 5.4vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 14px;
+    }
+    .hero-subtitle {
+      color: var(--gold-light);
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .hero-desc {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.02rem;
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* Teacher image card on right of hero */
+    .hero-teacher {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-teacher-card {
+      position: relative;
+      width: min(360px, 100%);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+      border: 3px solid rgba(201,169,97,0.55);
+      background: var(--navy-2);
+      transform: translateY(0);
+      animation: floatY 6s ease-in-out infinite;
+    }
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .hero-teacher-img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      background: linear-gradient(135deg, var(--navy-3), var(--navy));
+    }
+    .hero-teacher-badge {
+      position: absolute;
+      left: 18px; bottom: 18px;
+      right: 18px;
+      background: rgba(13,27,62,0.82);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(201,169,97,0.35);
+      padding: 14px 16px;
+      border-radius: 14px;
+      color: #fff;
+    }
+    .hero-teacher-badge .name { font-weight: 700; font-size: 1.05rem; }
+    .hero-teacher-badge .role { color: var(--gold-light); font-size: 0.84rem; margin-top: 2px; }
+
+    /* Slider controls */
+    .hero-arrows {
+      position: absolute;
+      bottom: 28px;
+      right: 24px;
+      display: flex;
+      gap: 10px;
+      z-index: 5;
+    }
+    .hero-arrow {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--t), transform var(--t);
+    }
+    .hero-arrow:hover { background: var(--gold); color: var(--navy); transform: scale(1.06); }
+    .hero-arrow svg { width: 20px; height: 20px; }
+
+    .hero-dots {
+      position: absolute;
+      bottom: 36px;
+      left: 24px;
+      display: flex;
+      gap: 8px;
+      z-index: 5;
+    }
+    .hero-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      transition: background var(--t), width var(--t);
+      cursor: pointer;
+    }
+    .hero-dot.active {
+      background: var(--gold);
+      width: 28px;
+      border-radius: 5px;
+    }
+
+    .hero-single .hero-arrows,
+    .hero-single .hero-dots { display: none; }
+
+    /* ---------- 6. TEACHER SECTION ---------- */
+    .teacher-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .teacher-photo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .teacher-photo-frame {
+      position: relative;
+      width: min(380px, 100%);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, var(--navy-3), var(--navy));
+    }
+    .teacher-photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: var(--radius-lg);
+      padding: 3px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold-dark));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .teacher-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .teacher-photo-deco {
+      position: absolute;
+      width: 120px; height: 120px;
+      background: var(--gold-soft);
+      border-radius: 50%;
+      z-index: 0;
+      filter: blur(8px);
+    }
+    .teacher-photo-deco.tl { top: -28px; left: -22px; }
+    .teacher-photo-deco.br { bottom: -22px; right: -16px; background: rgba(13,27,62,0.08); }
+
+    .teacher-info h2 {
+      font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+      margin-bottom: 6px;
+    }
+    .teacher-name { color: var(--heading); }
+    .teacher-role-tag {
+      display: inline-block;
+      color: var(--gold-dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 22px;
+      letter-spacing: 0.04em;
+    }
+    [data-theme="dark"] .teacher-role-tag { color: var(--gold-light); }
+    .teacher-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .teacher-stat {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .teacher-stat .label {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+    .teacher-stat .value {
+      font-size: 1rem;
+      color: var(--heading);
+      font-weight: 600;
+    }
+    .teacher-intro {
+      color: var(--text-soft);
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+    .teacher-philosophy {
+      background: var(--gold-soft);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      color: var(--heading);
+      font-style: italic;
+      margin-bottom: 24px;
+      font-size: 0.96rem;
+    }
+    .teacher-highlights { margin-bottom: 26px; }
+    .teacher-highlights-title {
+      font-size: 1rem; font-weight: 600; color: var(--heading); margin-bottom: 12px;
+    }
+    .teacher-highlights ul { display: grid; gap: 10px; }
+    .teacher-highlights li {
+      display: flex; align-items: flex-start; gap: 10px;
+      color: var(--text-soft); font-size: 0.95rem;
+    }
+    .teacher-highlights li::before {
+      content: '';
+      width: 18px; height: 18px;
+      flex-shrink: 0;
+      margin-top: 4px;
+      background: var(--gold);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/contain no-repeat;
+    }
+    .teacher-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* ---------- 7. COURSES ---------- */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 28px;
+    }
+    .course-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+    }
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gold);
+    }
+    .course-img-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--navy-2), var(--navy-3));
+    }
+    .course-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform var(--t-slow);
+    }
+    .course-card:hover .course-img { transform: scale(1.06); }
+    .course-img-fallback {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--navy-2), var(--navy-3));
+      color: var(--gold-light);
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+    .course-tags {
+      position: absolute;
+      top: 14px; left: 14px;
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .course-tag {
+      background: rgba(13,27,62,0.85);
+      backdrop-filter: blur(6px);
+      color: var(--gold-light);
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 0.76rem;
+      font-weight: 600;
+      border: 1px solid rgba(201,169,97,0.4);
+    }
+    .course-body {
+      padding: 22px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .course-title {
+      font-size: 1.18rem;
+      margin-bottom: 6px;
+      color: var(--heading);
+    }
+    .course-subject {
+      color: var(--gold-dark);
+      font-weight: 600;
+      font-size: 0.86rem;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .course-subject { color: var(--gold-light); }
+    .course-desc {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .course-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 14px;
+      margin-bottom: 18px;
+      padding: 14px;
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+    }
+    .course-meta-item { display: flex; flex-direction: column; gap: 2px; }
+    .course-meta-item .m-label {
+      font-size: 0.72rem;
+      color: var(--gray-500);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .course-meta-item .m-value {
+      font-size: 0.88rem;
+      color: var(--heading);
+      font-weight: 500;
+    }
+    .course-footer { margin-top: auto; }
+    .course-btn { width: 100%; }
+
+    .courses-empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-soft);
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      border: 2px dashed var(--gray-300);
+    }
+
+    /* ---------- 8. SUCCESS RATE ---------- */
+    .success-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .success-visual {
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .success-ring {
+      --pct: 0;
+      width: clamp(240px, 32vw, 320px);
+      height: clamp(240px, 32vw, 320px);
+      border-radius: 50%;
+      background:
+        conic-gradient(var(--gold) calc(var(--pct) * 1%), rgba(255,255,255,0.15) 0);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(201,169,97,0.25);
+    }
+    .success-ring::before {
+      content: '';
+      position: absolute;
+      inset: 14px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      border-radius: 50%;
+    }
+    .success-ring-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+    }
+    .success-ring-inner .num {
+      font-size: clamp(2.6rem, 6vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1;
+      color: var(--gold-light);
+    }
+    .success-ring-inner .pct-sign {
+      font-size: 1.6rem;
+      color: var(--gold-light);
+      vertical-align: top;
+      margin-left: 2px;
+    }
+    .success-ring-inner .lbl {
+      margin-top: 8px;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.06em;
+    }
+    .success-content h2 { color: #fff; margin-bottom: 14px; }
+    .success-content p {
+      color: rgba(255,255,255,0.82);
+      font-size: 1.02rem;
+      margin-bottom: 20px;
+    }
+    .success-note {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      font-style: italic;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* ---------- 9. CONTACT SECTION ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+    .contact-card {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    [data-theme="dark"] .contact-card { border: 1px solid var(--border); }
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(201,169,97,0.18), transparent 70%);
+    }
+    .contact-card h3 { color: #fff; font-size: 1.5rem; margin-bottom: 6px; }
+    .contact-card .academy { color: var(--gold-light); font-weight: 600; margin-bottom: 22px; }
+    .contact-list { display: grid; gap: 16px; margin-bottom: 26px; }
+    .contact-row {
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .contact-icon {
+      width: 44px; height: 44px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: rgba(201,169,97,0.18);
+      border: 1px solid rgba(201,169,97,0.3);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold-light);
+    }
+    .contact-icon svg { width: 20px; height: 20px; }
+    .contact-row .c-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 2px;
+    }
+    .contact-row .c-value { font-size: 0.98rem; color: #fff; word-break: break-word; }
+
+    .contact-socials {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .social-link {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      transition: background var(--t), transform var(--t), color var(--t);
+    }
+    .social-link:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
+    .social-link svg { width: 20px; height: 20px; }
+
+    .contact-side {
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .contact-side-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+    .contact-side-card .ico {
+      width: 60px; height: 60px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      background: var(--gold-soft);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold-dark);
+    }
+    [data-theme="dark"] .contact-side-card .ico { color: var(--gold-light); }
+    .contact-side-card .ico svg { width: 28px; height: 28px; }
+    .contact-side-card h4 { color: var(--heading); margin-bottom: 6px; }
+    .contact-side-card p { color: var(--text-soft); font-size: 0.9rem; margin-bottom: 16px; }
+
+    /* ---------- 10. FOOTER ---------- */
+    .footer {
+      background: linear-gradient(180deg, var(--navy) 0%, #060c1f 100%);
+      color: rgba(255,255,255,0.78);
+      padding: 64px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+    }
+    .footer-brand img,
+    .footer-brand .nav-logo-fallback { width: 44px; height: 44px; }
+    .footer-brand-name { color: #fff; font-weight: 700; font-size: 1.1rem; }
+    .footer-about { font-size: 0.9rem; line-height: 1.7; margin-bottom: 18px; max-width: 360px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer h5 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    .footer-links { display: grid; gap: 10px; }
+    .footer-links a {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.92rem;
+      transition: color var(--t), padding-left var(--t);
+    }
+    .footer-links a:hover { color: var(--gold-light); padding-left: 6px; }
+    .footer-bottom {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 12px;
+      padding: 22px 0;
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-bottom a { color: var(--gold-light); }
+
+    /* ---------- 11. FLOATING WHATSAPP ---------- */
+    .float-wa {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+      z-index: 900;
+      transition: transform var(--t), box-shadow var(--t);
+      animation: pulse 2.6s infinite;
+    }
+    .float-wa:hover { transform: scale(1.08); box-shadow: 0 14px 38px rgba(37,211,102,0.55); }
+    .float-wa svg { width: 32px; height: 32px; }
+    @keyframes pulse {
+      0% { box-shadow: 0 10px 30px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.5); }
+      70% { box-shadow: 0 10px 30px rgba(37,211,102,0.45), 0 0 0 18px rgba(37,211,102,0); }
+      100% { box-shadow: 0 10px 30px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0); }
+    }
+
+    /* ---------- 12. ANIMATIONS & REVEAL ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .reveal[data-delay="1"] { transition-delay: 0.1s; }
+    .reveal[data-delay="2"] { transition-delay: 0.2s; }
+    .reveal[data-delay="3"] { transition-delay: 0.3s; }
+
+    .err-notice {
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      color: #78350f;
+      padding: 12px 16px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      text-align: center;
+      margin: 16px 0;
+    }
+    [data-theme="dark"] .err-notice {
+      background: rgba(252, 211, 77, 0.12);
+      color: #fcd34d;
+      border-color: rgba(252, 211, 77, 0.3);
+    }
+
+    /* ---------- 13. RESPONSIVE: TABLET (<= 1024px) ---------- */
+    @media (max-width: 1024px) {
+      .section { padding: 72px 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-teacher { display: none; }
+      .teacher-grid { grid-template-columns: 1fr; gap: 40px; }
+      .teacher-photo-wrap { margin-bottom: 0; }
+      .success-wrap { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+      .success-content { max-width: 620px; margin: 0 auto; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+    }
+
+    /* ---------- 14. RESPONSIVE: MOBILE (<= 768px) ---------- */
+    @media (max-width: 768px) {
+      .container { padding: 0 18px; }
+      .section { padding: 60px 0; }
+      .section-head { margin-bottom: 38px; }
+
+      .nav-links { display: none; }
+      .nav-cta .btn { display: none; }
+      /* On mobile: hide lang/theme from navbar (they live in the mobile menu) */
+      .nav-controls { display: none; }
+      .nav-toggle { display: flex; }
+
+      .nav-brand-name { font-size: 0.98rem; }
+      .nav-brand-tag { font-size: 0.66rem; }
+
+      .hero { min-height: clamp(520px, 86vh, 720px); }
+      .hero-inner { padding: 44px 0; }
+      .hero-actions .btn { flex: 1 1 auto; }
+      .hero-arrows { bottom: 20px; right: 18px; }
+      .hero-arrow { width: 40px; height: 40px; }
+      .hero-dots { bottom: 28px; left: 18px; }
+
+      .teacher-stats { grid-template-columns: 1fr; }
+      .teacher-actions .btn { flex: 1 1 auto; }
+
+      .courses-grid { grid-template-columns: 1fr; gap: 20px; }
+      .course-meta { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .footer-grid > div:first-child { grid-column: auto; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .float-wa { right: 16px; bottom: 16px; width: 54px; height: 54px; }
+      .float-wa svg { width: 28px; height: 28px; }
+    }
+
+    /* ---------- 15. RESPONSIVE: SMALL MOBILE (<= 430px) ---------- */
+    @media (max-width: 430px) {
+      body { font-size: 15px; }
+      .hero-title { font-size: 1.85rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .hero-desc { font-size: 0.92rem; }
+      .section-title { font-size: 1.5rem; }
+      .btn { padding: 12px 20px; font-size: 0.9rem; }
+      .contact-card { padding: 28px 22px; }
+      .teacher-stat { padding: 14px; }
+      .nav-logo, .nav-logo-fallback { width: 40px; height: 40px; }
+      .nav-brand-name { font-size: 0.92rem; }
+    }
+
+    /* ---------- 16. RESPONSIVE: EXTRA SMALL (<= 360px) ---------- */
+    @media (max-width: 360px) {
+      .container { padding: 0 14px; }
+      .hero-title { font-size: 1.65rem; }
+      .section-eyebrow { font-size: 0.74rem; }
+      .btn { padding: 11px 16px; font-size: 0.86rem; }
+      .course-body { padding: 18px; }
+    }
+
+    /* ---------- 17. REDUCED MOTION ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-teacher-card { animation: none; }
+      .float-wa { animation: none; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* ---------- 18. PRINT ---------- */
+    @media print {
+      .nav, .float-wa, .hero-arrows, .hero-dots, .nav-toggle, .mobile-menu, .nav-controls { display: none !important; }
+      .hero { min-height: auto; color: var(--navy); background: #fff; }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link" data-i18n="skip_main">মূল কন্টেন্টে যান</a>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-brand" id="navBrand" aria-label="Learn To Live Academy">
+        <span class="nav-logo-fallback" id="navLogoFallback">L</span>
+        <span class="nav-brand-text">
+          <span class="nav-brand-name" id="navBrandName">Learn To Live Academy</span>
+          <span class="nav-brand-tag" id="navBrandTag" data-i18n="brand_tag">প্রিমিয়াম টিউশন একাডেমি</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation" id="navLinks">
+        <a href="#home"      class="nav-link active" data-i18n="nav_home">হোম</a>
+        <a href="#teacher"   class="nav-link" data-i18n="nav_teacher">শিক্ষক পরিচিতি</a>
+        <a href="#courses"   class="nav-link" data-i18n="nav_courses">কোর্স ও ক্লাস</a>
+        <a href="#success"   class="nav-link" data-i18n="nav_success">সাফল্য</a>
+        <a href="#contact"   class="nav-link" data-i18n="nav_contact">যোগাযোগ</a>
+      </nav>
+
+      <div class="nav-cta">
+        <!-- Theme + Language controls (desktop) -->
+        <div class="nav-controls">
+          <div class="lang-toggle" role="group" aria-label="Language" data-i18n-attr="aria-label:aria_lang">
+            <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            <button class="lang-btn" data-lang="bn" aria-pressed="true">বাং</button>
+          </div>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-i18n-attr="aria-label:aria_theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+
+        <a href="#" class="btn btn--whatsapp" id="navWhatsappBtn" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
+          <span data-i18n="nav_whatsapp">হোয়াটসঅ্যাপ</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" data-i18n-attr="aria-label:nav_menu_open">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu-backdrop" id="menuBackdrop" hidden></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <!-- Controls at top of mobile menu -->
+    <div class="menu-controls">
+      <div class="lang-toggle" role="group" aria-label="Language" data-i18n-attr="aria-label:aria_lang">
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="bn" aria-pressed="true">বাং</button>
+      </div>
+      <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme" data-i18n-attr="aria-label:aria_theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <a href="#home"    class="active" data-i18n="nav_home">হোম</a>
+    <a href="#teacher" data-i18n="nav_teacher">শিক্ষক পরিচিতি</a>
+    <a href="#courses" data-i18n="nav_courses">কোর্স ও ক্লাস</a>
+    <a href="#success" data-i18n="nav_success">সাফল্য</a>
+    <a href="#contact" data-i18n="nav_contact">যোগাযোগ</a>
+    <a href="#" class="btn btn--whatsapp" id="mobileWhatsappBtn">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
+      <span data-i18n="nav_whatsapp_long">হোয়াটসঅ্যাপে যোগাযোগ</span>
+    </a>
+  </aside>
+
+  <main id="main">
+
+    <!-- ============================================================
+         1. HERO BANNER SLIDER
+         ============================================================ -->
+    <section class="hero" id="home" aria-label="Home">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-grid">
+          <div class="hero-content" id="heroContent">
+            <!-- Slides injected by JS from data/banners.json -->
+          </div>
+
+          <div class="hero-teacher" id="heroTeacher">
+            <!-- Teacher image card injected by JS from settings.json -->
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-dots" id="heroDots" role="tablist" data-i18n-attr="aria-label:hero_dots_label"></div>
+      <div class="hero-arrows">
+        <button class="hero-arrow" id="heroPrev" aria-label="Previous slide" data-i18n-attr="aria-label:hero_prev">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="hero-arrow" id="heroNext" aria-label="Next slide" data-i18n-attr="aria-label:hero_next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. TEACHER INTRODUCTION
+         ============================================================ -->
+    <section class="section section--light" id="teacher" aria-label="Teacher">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow" data-i18n="teacher_eyebrow">শিক্ষক পরিচিতি</span>
+          <h2 class="section-title" data-i18n="teacher_title">আপনার সন্তানের শিক্ষক</h2>
+          <p class="section-subtitle" data-i18n="teacher_subtitle">অভিজ্ঞতা ও যোগ্যতায় সমৃদ্ধ একজন নিবেদিতপ্রাণ শিক্ষকের সাথে পরিচিত হোন।</p>
+        </div>
+
+        <div class="teacher-grid">
+          <div class="teacher-photo-wrap reveal">
+            <span class="teacher-photo-deco tl"></span>
+            <span class="teacher-photo-deco br"></span>
+            <div class="teacher-photo-frame">
+              <img id="teacherPhoto" class="teacher-photo" alt="Teacher photo" data-i18n-attr="alt:teacher_photo_alt" src="assets/images/teacher.png" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="teacher-info reveal" data-delay="1">
+            <h2 class="teacher-name" id="teacherName">—</h2>
+            <span class="teacher-role-tag" id="teacherRole">—</span>
+
+            <div class="teacher-stats">
+              <div class="teacher-stat">
+                <div class="label" data-i18n="teacher_qual_label">যোগ্যতা</div>
+                <div class="value" id="teacherQualification">—</div>
+              </div>
+              <div class="teacher-stat">
+                <div class="label" data-i18n="teacher_exp_label">শিক্ষণ অভিজ্ঞতা</div>
+                <div class="value" id="teacherExperience">—</div>
+              </div>
+            </div>
+
+            <p class="teacher-intro" id="teacherIntro"></p>
+
+            <div class="teacher-philosophy" id="teacherPhilosophy"></div>
+
+            <div class="teacher-highlights">
+              <div class="teacher-highlights-title" data-i18n="teacher_highlights_title">বিশেষত্ব</div>
+              <ul id="teacherHighlights"><li data-i18n="teacher_loading">তথ্য লোড হচ্ছে…</li></ul>
+            </div>
+
+            <div class="teacher-actions">
+              <a href="#courses" class="btn btn--navy" data-i18n="teacher_btn_courses">কোর্স দেখুন</a>
+              <a href="#" class="btn btn--whatsapp" id="teacherWhatsappBtn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
+                <span data-i18n="teacher_btn_whatsapp">হোয়াটসঅ্যাপে যোগাযোগ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. COURSES & CLASSES
+         ============================================================ -->
+    <section class="section section--white" id="courses" aria-label="Courses">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow" data-i18n="courses_eyebrow">কোর্স ও ক্লাস</span>
+          <h2 class="section-title" data-i18n="courses_title">আমাদের কোর্সসমূহ</h2>
+          <p class="section-subtitle" data-i18n="courses_subtitle">শিক্ষার্থীদের জন্য যত্নসহকারে ডিজাইন করা প্রিমিয়াম কোর্স। প্রতিটি বিষয়ে বিস্তারিত জানতে হোয়াটসঅ্যাপে যোগাযোগ করুন।</p>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid">
+          <!-- Course cards injected by JS from data/courses.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. SUCCESS RATE
+         ============================================================ -->
+    <section class="section section--navy" id="success" aria-label="Success">
+      <div class="container">
+        <div class="success-wrap">
+          <div class="success-visual reveal">
+            <div class="success-ring" id="successRing" role="img" aria-label="Success rate" data-i18n-attr="aria-label:success_ring_label">
+              <div class="success-ring-inner">
+                <div>
+                  <span class="num" id="successNum">0</span><span class="pct-sign">%</span>
+                </div>
+                <div class="lbl" data-i18n="success_ring_label">সাফল্যের হার</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="success-content reveal" data-delay="1">
+            <span class="section-eyebrow" data-i18n="success_eyebrow">সাফল্য</span>
+            <h2 class="section-title" style="color:#fff;" data-i18n="success_title">শিক্ষার্থীদের সাফল্যই আমাদের পরিচয়</h2>
+            <p id="successDesc">—</p>
+            <p class="success-note" data-i18n="success_note">নোট: এই পরিসংখ্যান নমুনা হিসেবে দেখানো হচ্ছে। সঠিক তথ্য settings.json ফাইলে যাচাই করে আপডেট করা হবে।</p>
+            <div style="margin-top:24px;">
+              <a href="#contact" class="btn btn--gold" data-i18n="success_btn">আজই যোগাযোগ করুন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. CONTACT & WHATSAPP
+         ============================================================ -->
+    <section class="section section--light" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow" data-i18n="contact_eyebrow">যোগাযোগ</span>
+          <h2 class="section-title" data-i18n="contact_title">আমাদের সাথে যোগাযোগ করুন</h2>
+          <p class="section-subtitle" data-i18n="contact_subtitle">যেকোনো প্রশ্ন বা ভর্তি সংক্রান্ত তথ্যের জন্য হোয়াটসঅ্যাপে সরাসরি যোগাযোগ করুন।</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3 id="contactAcademyName">Learn To Live Academy</h3>
+            <div class="academy" id="contactTeacherName">—</div>
+
+            <div class="contact-list">
+              <div class="contact-row" id="contactPhoneRow" hidden>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="c-label" data-i18n="contact_phone">ফোন</div>
+                  <div class="c-value" id="contactPhone">—</div>
+                </div>
+              </div>
+
+              <div class="contact-row" id="contactAddressRow" hidden>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="c-label" data-i18n="contact_address">ঠিকানা</div>
+                  <div class="c-value" id="contactAddress">—</div>
+                </div>
+              </div>
+
+              <div class="contact-row" id="contactEmailRow" hidden>
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="c-label" data-i18n="contact_email">ইমেইল</div>
+                  <div class="c-value" id="contactEmail">—</div>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-icon" style="background:rgba(37,211,102,0.18); border-color:rgba(37,211,102,0.4); color:#5ddc84;">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
+                </div>
+                <div>
+                  <div class="c-label" data-i18n="contact_whatsapp">হোয়াটসঅ্যাপ</div>
+                  <div class="c-value" id="contactWhatsapp">—</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn--whatsapp" id="contactWhatsappBtn" style="width:100%;">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
+              <span data-i18n="contact_btn">হোয়াটসঅ্যাপে বার্তা পাঠান</span>
+            </a>
+
+            <div class="contact-socials" id="contactSocials" hidden></div>
+          </div>
+
+          <div class="contact-side">
+            <div class="contact-side-card reveal" data-delay="1">
+              <div class="ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h4 data-i18n="contact_side1_title">দ্রুত সাড়া</h4>
+              <p data-i18n="contact_side1_desc">হোয়াটসঅ্যাপে বার্তা পাঠালে সাধারণত কয়েক মিনিটের মধ্যেই উত্তর পাওয়া যায়।</p>
+              <a href="#courses" class="btn btn--ghost" data-i18n="contact_side1_btn">কোর্স দেখুন</a>
+            </div>
+
+            <div class="contact-side-card reveal" data-delay="2">
+              <div class="ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3 3 9 3 12 0v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h4 data-i18n="contact_side2_title">ব্যক্তিগত পরামর্শ</h4>
+              <p data-i18n="contact_side2_desc">শিক্ষার্থীর শ্রেণি ও বিষয় অনুযায়ী সঠিক কোর্স নির্বাচনে সহায়তা পান।</p>
+              <a href="#teacher" class="btn btn--ghost" data-i18n="contact_side2_btn">শিক্ষক সম্পর্কে জানুন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="nav-logo-fallback" id="footerLogoFallback">L</span>
+            <span class="footer-brand-name" id="footerAcademyName">Learn To Live Academy</span>
+          </div>
+          <p class="footer-about" id="footerAbout">—</p>
+          <div class="footer-socials" id="footerSocials"></div>
+        </div>
+
+        <div>
+          <h5 data-i18n="footer_quick_links">দ্রুত লিঙ্ক</h5>
+          <div class="footer-links">
+            <a href="#home" data-i18n="nav_home">হোম</a>
+            <a href="#teacher" data-i18n="nav_teacher">শিক্ষক পরিচিতি</a>
+            <a href="#courses" data-i18n="nav_courses">কোর্স ও ক্লাস</a>
+            <a href="#success" data-i18n="nav_success">সাফল্য</a>
+            <a href="#contact" data-i18n="nav_contact">যোগাযোগ</a>
+          </div>
+        </div>
+
+        <div>
+          <h5 data-i18n="footer_contact">যোগাযোগ</h5>
+          <div class="footer-links">
+            <a href="#" id="footerWhatsapp" data-i18n="footer_whatsapp">হোয়াটসঅ্যাপ</a>
+            <a href="#contact" data-i18n="footer_address_phone">ঠিকানা ও ফোন</a>
+            <a href="#courses" data-i18n="footer_admission">ভর্তি সংক্রান্ত প্রশ্ন</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span><span>© </span><span id="year"></span><span> </span><span id="footerAcademyName2">Learn To Live Academy</span><span>. </span><span data-i18n="footer_rights">সর্বস্বত্ব সংরক্ষিত।</span></span>
+        <span data-i18n="footer_tagline">প্রিমিয়াম টিউশন একাডেমি</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="#" class="float-wa" id="floatWhatsapp" aria-label="WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    /* ============================================================
+       LEARN TO LIVE ACADEMY — SCRIPT
+       Vanilla JS. Loads: data/settings.json, data/banners.json,
+       data/courses.json. Supports Dark/Light theme + EN/BN lang.
+       ============================================================ */
+
+    (function () {
+      'use strict';
+
+      /* ---------- 0. STATE ---------- */
+      var STATE = {
+        theme: document.documentElement.getAttribute('data-theme') || 'light',
+        lang: 'bn',
+        settings: null,
+        banners: [],
+        courses: []
+      };
+
+      var SLIDER = {
+        index: 0,
+        timer: null,
+        interval: 5500
+      };
+
+      var successAnimated = false;
+
+      /* ---------- 1. i18n DICTIONARY ---------- */
+      var I18N = {
+        bn: {
+          brand_tag: 'প্রিমিয়াম টিউশন একাডেমি',
+          nav_home: 'হোম',
+          nav_teacher: 'শিক্ষক পরিচিতি',
+          nav_courses: 'কোর্স ও ক্লাস',
+          nav_success: 'সাফল্য',
+          nav_contact: 'যোগাযোগ',
+          nav_whatsapp: 'হোয়াটসঅ্যাপ',
+          nav_whatsapp_long: 'হোয়াটসঅ্যাপে যোগাযোগ',
+          nav_menu_open: 'মেনু খুলুন',
+          skip_main: 'মূল কন্টেন্টে যান',
+          aria_theme: 'থিম পরিবর্তন',
+          aria_lang: 'ভাষা নির্বাচন',
+          hero_default_eyebrow: 'প্রিমিয়াম টিউশন একাডেমি',
+          hero_default_desc: 'অভিজ্ঞ শিক্ষক, কার্যকরী কোর্স এবং সাফল্যের নিশ্চয়তা। আপনার সন্তানের উজ্জ্বল ভবিষ্যতের সঠিক পথপ্রদর্শক আমরা।',
+          hero_view_courses: 'কোর্স দেখুন',
+          hero_whatsapp_contact: 'হোয়াটসঅ্যাপে যোগাযোগ',
+          hero_prev: 'পূর্ববর্তী স্লাইড',
+          hero_next: 'পরবর্তী স্লাইড',
+          hero_dots_label: 'স্লাইডার নেভিগেশন',
+          teacher_eyebrow: 'শিক্ষক পরিচিতি',
+          teacher_title: 'আপনার সন্তানের শিক্ষক',
+          teacher_subtitle: 'অভিজ্ঞতা ও যোগ্যতায় সমৃদ্ধ একজন নিবেদিতপ্রাণ শিক্ষকের সাথে পরিচিত হোন।',
+          teacher_role_default: 'প্রধান শিক্ষক',
+          teacher_qual_label: 'যোগ্যতা',
+          teacher_exp_label: 'শিক্ষণ অভিজ্ঞতা',
+          teacher_highlights_title: 'বিশেষত্ব',
+          teacher_btn_courses: 'কোর্স দেখুন',
+          teacher_btn_whatsapp: 'হোয়াটসঅ্যাপে যোগাযোগ',
+          teacher_photo_alt: 'শিক্ষকের ছবি',
+          teacher_loading: 'তথ্য লোড হচ্ছে…',
+          teacher_highlights_default: 'শিক্ষার্থীদের ব্যক্তিগত যত্ন ও গাইডলাইন।',
+          courses_eyebrow: 'কোর্স ও ক্লাস',
+          courses_title: 'আমাদের কোর্সসমূহ',
+          courses_subtitle: 'শিক্ষার্থীদের জন্য যত্নসহকারে ডিজাইন করা প্রিমিয়াম কোর্স। প্রতিটি বিষয়ে বিস্তারিত জানতে হোয়াটসঅ্যাপে যোগাযোগ করুন।',
+          courses_meta_duration: 'সময়কাল',
+          courses_meta_schedule: 'সাপ্তাহিক সূচি',
+          courses_meta_perclass: 'প্রতি ক্লাস',
+          courses_btn_whatsapp: 'হোয়াটসঅ্যাপে যোগাযোগ',
+          courses_btn_contact: 'যোগাযোগ করুন',
+          courses_empty_title: 'কোনো কোর্স পাওয়া যায়নি',
+          courses_empty_msg: 'কোর্স তথ্য লোড করা যাচ্ছে না বা কোনো সক্রিয় কোর্স নেই। অনুগ্রহ করে পরে আবার চেষ্টা করুন অথবা সরাসরি হোয়াটসঅ্যাপে যোগাযোগ করুন।',
+          success_eyebrow: 'সাফল্য',
+          success_title: 'শিক্ষার্থীদের সাফল্যই আমাদের পরিচয়',
+          success_ring_label: 'সাফল্যের হার',
+          success_default_desc: 'আমাদের শিক্ষার্থীদের অধিকাংশই তাদের লক্ষ্য অর্জনে সক্ষম হয়েছে।',
+          success_note: 'নোট: এই পরিসংখ্যান নমুনা হিসেবে দেখানো হচ্ছে। সঠিক তথ্য settings.json ফাইলে যাচাই করে আপডেট করা হবে।',
+          success_btn: 'আজই যোগাযোগ করুন',
+          contact_eyebrow: 'যোগাযোগ',
+          contact_title: 'আমাদের সাথে যোগাযোগ করুন',
+          contact_subtitle: 'যেকোনো প্রশ্ন বা ভর্তি সংক্রান্ত তথ্যের জন্য হোয়াটসঅ্যাপে সরাসরি যোগাযোগ করুন।',
+          contact_phone: 'ফোন',
+          contact_address: 'ঠিকানা',
+          contact_email: 'ইমেইল',
+          contact_whatsapp: 'হোয়াটসঅ্যাপ',
+          contact_btn: 'হোয়াটসঅ্যাপে বার্তা পাঠান',
+          contact_side1_title: 'দ্রুত সাড়া',
+          contact_side1_desc: 'হোয়াটসঅ্যাপে বার্তা পাঠালে সাধারণত কয়েক মিনিটের মধ্যেই উত্তর পাওয়া যায়।',
+          contact_side1_btn: 'কোর্স দেখুন',
+          contact_side2_title: 'ব্যক্তিগত পরামর্শ',
+          contact_side2_desc: 'শিক্ষার্থীর শ্রেণি ও বিষয় অনুযায়ী সঠিক কোর্স নির্বাচনে সহায়তা পান।',
+          contact_side2_btn: 'শিক্ষক সম্পর্কে জানুন',
+          footer_about_default: 'একটি প্রিমিয়াম টিউশন একাডেমি যেখানে শিক্ষার্থীদের সাফল্যই আমাদের মূল লক্ষ্য।',
+          footer_quick_links: 'দ্রুত লিঙ্ক',
+          footer_contact: 'যোগাযোগ',
+          footer_whatsapp: 'হোয়াটসঅ্যাপ',
+          footer_address_phone: 'ঠিকানা ও ফোন',
+          footer_admission: 'ভর্তি সংক্রান্ত প্রশ্ন',
+          footer_rights: 'সর্বস্বত্ব সংরক্ষিত।',
+          footer_tagline: 'প্রিমিয়াম টিউশন একাডেমি',
+          loading_course: 'কোর্স',
+          loading_teacher: 'শিক্ষক',
+          error_courses: 'কোর্সের তথ্য লোড করা যায়নি। অনুগ্রহ করে পরে আবার চেষ্টা করুন অথবা হোয়াটসঅ্যাপে যোগাযোগ করুন।',
+          error_general: 'তথ্য লোড করতে সমস্যা হয়েছে। অনুগ্রহ করে পরে আবার চেষ্টা করুন।',
+          wa_course_class: 'শ্রেণি',
+          wa_course_subject: 'বিষয়',
+          wa_course_detail_req: 'অনুগ্রহ করে বিস্তারিত জানান।'
+        },
+        en: {
+          brand_tag: 'Premium Tuition Academy',
+          nav_home: 'Home',
+          nav_teacher: 'Teacher',
+          nav_courses: 'Courses',
+          nav_success: 'Success',
+          nav_contact: 'Contact',
+          nav_whatsapp: 'WhatsApp',
+          nav_whatsapp_long: 'Contact on WhatsApp',
+          nav_menu_open: 'Open menu',
+          skip_main: 'Skip to main content',
+          aria_theme: 'Toggle theme',
+          aria_lang: 'Select language',
+          hero_default_eyebrow: 'Premium Tuition Academy',
+          hero_default_desc: 'Experienced teacher, effective courses, and a promise of success. We are the right guide for your child\u2019s bright future.',
+          hero_view_courses: 'View Courses',
+          hero_whatsapp_contact: 'Contact on WhatsApp',
+          hero_prev: 'Previous slide',
+          hero_next: 'Next slide',
+          hero_dots_label: 'Slider navigation',
+          teacher_eyebrow: 'Teacher Profile',
+          teacher_title: 'Your Child\u2019s Teacher',
+          teacher_subtitle: 'Meet a dedicated teacher rich in experience and qualification.',
+          teacher_role_default: 'Head Teacher',
+          teacher_qual_label: 'Qualification',
+          teacher_exp_label: 'Teaching Experience',
+          teacher_highlights_title: 'Highlights',
+          teacher_btn_courses: 'View Courses',
+          teacher_btn_whatsapp: 'Contact on WhatsApp',
+          teacher_photo_alt: 'Teacher photo',
+          teacher_loading: 'Loading\u2026',
+          teacher_highlights_default: 'Personal care and guidance for every student.',
+          courses_eyebrow: 'Courses & Classes',
+          courses_title: 'Our Courses',
+          courses_subtitle: 'Premium courses carefully designed for students. Contact us on WhatsApp for details on each subject.',
+          courses_meta_duration: 'Duration',
+          courses_meta_schedule: 'Weekly Schedule',
+          courses_meta_perclass: 'Per Class',
+          courses_btn_whatsapp: 'Contact on WhatsApp',
+          courses_btn_contact: 'Contact Us',
+          courses_empty_title: 'No courses found',
+          courses_empty_msg: 'Course data could not be loaded or no courses are currently active. Please try again later or contact us directly on WhatsApp.',
+          success_eyebrow: 'Success',
+          success_title: 'Student success is our identity',
+          success_ring_label: 'Success Rate',
+          success_default_desc: 'Most of our students have achieved their goals.',
+          success_note: 'Note: This statistic is shown as a sample. Verified data will be updated in settings.json.',
+          success_btn: 'Contact Today',
+          contact_eyebrow: 'Contact',
+          contact_title: 'Get in Touch',
+          contact_subtitle: 'For any questions or admission-related information, contact us directly on WhatsApp.',
+          contact_phone: 'Phone',
+          contact_address: 'Address',
+          contact_email: 'Email',
+          contact_whatsapp: 'WhatsApp',
+          contact_btn: 'Send WhatsApp Message',
+          contact_side1_title: 'Quick Response',
+          contact_side1_desc: 'Messages on WhatsApp are usually answered within a few minutes.',
+          contact_side1_btn: 'View Courses',
+          contact_side2_title: 'Personal Guidance',
+          contact_side2_desc: 'Get help choosing the right course based on the student\u2019s class and subject.',
+          contact_side2_btn: 'About the Teacher',
+          footer_about_default: 'A premium tuition academy where student success is our primary goal.',
+          footer_quick_links: 'Quick Links',
+          footer_contact: 'Contact',
+          footer_whatsapp: 'WhatsApp',
+          footer_address_phone: 'Address & Phone',
+          footer_admission: 'Admission Inquiry',
+          footer_rights: 'All rights reserved.',
+          footer_tagline: 'Premium Tuition Academy',
+          loading_course: 'Course',
+          loading_teacher: 'Teacher',
+          error_courses: 'Course data could not be loaded. Please try again later or contact us on WhatsApp.',
+          error_general: 'There was a problem loading data. Please try again later.',
+          wa_course_class: 'Class',
+          wa_course_subject: 'Subject',
+          wa_course_detail_req: 'Please share the details.'
+        }
+      };
+
+      /* ---------- 2. UTILITIES ---------- */
+      function t(key) {
+        var lang = I18N[STATE.lang] ? STATE.lang : 'bn';
+        return I18N[lang][key] || I18N.bn[key] || key;
+      }
+
+      // Translated field getter: returns obj[field_en] if lang=en and present, else obj[field]
+      function tr(obj, field) {
+        if (!obj) return '';
+        if (STATE.lang === 'en' && obj[field + '_en']) return obj[field + '_en'];
+        return obj[field] || obj[field + '_en'] || '';
+      }
+
+      function fetchJSON(url) {
+        return new Promise(function (resolve, reject) {
+          var ctrl = (window.AbortController) ? new AbortController() : null;
+          var timeoutId = setTimeout(function () {
+            if (ctrl) ctrl.abort();
+          }, 9000);
+
+          fetch(url, ctrl ? { signal: ctrl.signal, cache: 'no-cache' } : { cache: 'no-cache' })
+            .then(function (res) {
+              clearTimeout(timeoutId);
+              if (!res.ok) throw new Error('HTTP ' + res.status + ' — ' + url);
+              return res.json();
+            })
+            .then(function (data) {
+              clearTimeout(timeoutId);
+              resolve(data);
+            })
+            .catch(function (err) {
+              clearTimeout(timeoutId);
+              reject(err);
+            });
+        });
+      }
+
+      function esc(str) {
+        if (str === null || str === undefined) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function str(val, fallback) {
+        if (val === null || val === undefined || val === '') return fallback || '';
+        return String(val);
+      }
+
+      function buildWhatsappLink(number, message) {
+        if (!number) return '';
+        var clean = String(number).replace(/[^\d]/g, '');
+        if (!clean) return '';
+        var msg = message || '';
+        return 'https://wa.me/' + clean + (msg ? ('?text=' + encodeURIComponent(message)) : '');
+      }
+
+      function applyWhatsapp(el, message) {
+        if (!el) return;
+        var wa = STATE.settings && STATE.settings.whatsapp ? STATE.settings.whatsapp : null;
+        var number = wa ? wa.number : '';
+        var defaultMsg = wa ? tr(wa, 'defaultMessage') : '';
+        if (!number) {
+          el.setAttribute('hidden', '');
+          el.removeAttribute('href');
+          el.setAttribute('aria-disabled', 'true');
+          return;
+        }
+        el.removeAttribute('hidden');
+        el.removeAttribute('aria-disabled');
+        el.setAttribute('href', buildWhatsappLink(number, message || defaultMsg));
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener');
+      }
+
+      /* ---------- 3. i18n APPLICATION ---------- */
+      function applyI18n() {
+        // Text content
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          el.textContent = t(el.getAttribute('data-i18n'));
+        });
+        // Attributes (format: "aria-label:key" or "attr1:key1;attr2:key2")
+        document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+          var spec = el.getAttribute('data-i18n-attr');
+          spec.split(';').forEach(function (pair) {
+            var parts = pair.split(':');
+            if (parts.length === 2) el.setAttribute(parts[0].trim(), t(parts[1].trim()));
+          });
+        });
+        // <html lang> + document title + meta description + og:locale
+        document.documentElement.lang = STATE.lang;
+        var academyName = (STATE.settings && tr(STATE.settings, 'academyName')) || 'Learn To Live Academy';
+        var titleSuffix = (STATE.lang === 'en') ? 'Premium Tuition Academy' : 'প্রিমিয়াম টিউশন একাডেমি';
+        document.title = academyName + ' | ' + titleSuffix;
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.setAttribute('content', (STATE.lang === 'en')
+            ? 'Learn To Live Academy — a premium tuition academy. Experienced teacher, effective courses, and a promise of success. Contact us on WhatsApp today.'
+            : 'Learn To Live Academy — একটি প্রিমিয়াম টিউশন একাডেমি। অভিজ্ঞ শিক্ষক, কার্যকরী কোর্স এবং সাফল্যের নিশ্চয়তা। হোয়াটসঅ্যাপে আজই যোগাযোগ করুন।');
+        }
+        var ogLocale = document.querySelector('meta[property="og:locale"]');
+        if (ogLocale) ogLocale.setAttribute('content', STATE.lang === 'en' ? 'en_US' : 'bn_BD');
+      }
+
+      function setLang(lang) {
+        if (lang !== 'en' && lang !== 'bn') return;
+        STATE.lang = lang;
+        try { localStorage.setItem('l2l-lang', lang); } catch (e) {}
+        // Update lang toggle buttons
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+        });
+        applyI18n();
+        // Re-render all dynamic content in the new language
+        renderAll();
+      }
+
+      function setTheme(theme) {
+        if (theme !== 'dark' && theme !== 'light') return;
+        STATE.theme = theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        try { localStorage.setItem('l2l-theme', theme); } catch (e) {}
+        // Update meta theme-color to match
+        var metaTC = document.querySelector('meta[name="theme-color"]');
+        if (metaTC) metaTC.setAttribute('content', theme === 'dark' ? '#0a1024' : '#0d1b3e');
+      }
+
+      /* ---------- 4. SETTINGS ---------- */
+      function applySettings(s) {
+        STATE.settings = s;
+
+        var academyName = tr(s, 'academyName') || 'Learn To Live Academy';
+        setText('navBrandName', academyName);
+        setText('footerAcademyName', academyName);
+        setText('footerAcademyName2', academyName);
+        setText('contactAcademyName', academyName);
+        // document.title updated in applyI18n
+
+        // Logo
+        if (s.logo) {
+          injectLogo('navLogoFallback', s.logo, academyName);
+          injectLogo('footerLogoFallback', s.logo, academyName);
+        }
+
+        // Teacher info
+        var teacherName = tr(s, 'teacherName') || t('loading_teacher');
+        setText('teacherName', teacherName);
+        setText('contactTeacherName', teacherName);
+        setText('teacherRole', tr(s, 'teacherRole') || t('teacher_role_default'));
+
+        setText('teacherQualification', tr(s, 'qualification') || '—');
+        setText('teacherExperience', tr(s, 'teachingExperience') || '—');
+        setText('teacherIntro', tr(s, 'introduction'));
+        setText('teacherPhilosophy', tr(s, 'teachingPhilosophy'));
+
+        renderHighlights(s.highlights);
+
+        // Teacher image
+        var teacherImg = document.getElementById('teacherPhoto');
+        teacherImg.src = s.teacherImage || 'assets/images/teacher.png';
+        teacherImg.alt = teacherName + ' — ' + t('teacher_photo_alt');
+        handleImgError(teacherImg, teacherName ? teacherName.charAt(0) : 'T');
+
+        renderHeroTeacher(s);
+
+        applySuccessRate(s.successRate, tr(s, 'successDescription'));
+        applyContactInfo(s);
+
+        setText('footerAbout', tr(s, 'footerText') || t('footer_about_default'));
+
+        // WhatsApp buttons (use translated default message)
+        var wa = s.whatsapp || {};
+        var defaultMsg = tr(wa, 'defaultMessage');
+        applyWhatsapp(document.getElementById('navWhatsappBtn'), defaultMsg);
+        applyWhatsapp(document.getElementById('mobileWhatsappBtn'), defaultMsg);
+        applyWhatsapp(document.getElementById('teacherWhatsappBtn'), defaultMsg);
+        applyWhatsapp(document.getElementById('contactWhatsappBtn'), defaultMsg);
+        applyWhatsapp(document.getElementById('floatWhatsapp'), defaultMsg);
+
+        var footerWa = document.getElementById('footerWhatsapp');
+        if (footerWa) {
+          var waLink = buildWhatsappLink(wa.number, defaultMsg);
+          if (waLink) {
+            footerWa.setAttribute('href', waLink);
+            footerWa.setAttribute('target', '_blank');
+            footerWa.setAttribute('rel', 'noopener');
+            footerWa.removeAttribute('hidden');
+          } else {
+            footerWa.setAttribute('hidden', '');
+          }
+        }
+      }
+
+      function injectLogo(fallbackElId, src, altText) {
+        var fb = document.getElementById(fallbackElId);
+        if (!fb) return;
+        // Avoid re-injecting if already an img
+        if (fb.tagName === 'IMG') {
+          fb.src = src;
+          return;
+        }
+        var img = document.createElement('img');
+        img.className = 'nav-logo';
+        img.src = src;
+        img.alt = altText + ' logo';
+        img.width = 46; img.height = 46;
+        img.addEventListener('error', function () {
+          var newFb = document.createElement('span');
+          newFb.className = 'nav-logo-fallback';
+          newFb.id = fallbackElId;
+          newFb.textContent = (altText ? altText.charAt(0) : 'L');
+          img.replaceWith(newFb);
+        });
+        fb.replaceWith(img);
+      }
+
+      function setText(id, text) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = text;
+      }
+
+      function renderHighlights(items) {
+        var ul = document.getElementById('teacherHighlights');
+        if (!ul) return;
+        // Pick the right-language array
+        var arr = items;
+        if (STATE.lang === 'en' && STATE.settings && STATE.settings.highlights_en) {
+          arr = STATE.settings.highlights_en;
+        }
+        if (!arr || !Array.isArray(arr) || arr.length === 0) {
+          ul.innerHTML = '<li>' + esc(t('teacher_highlights_default')) + '</li>';
+          return;
+        }
+        ul.innerHTML = arr.map(function (it) {
+          return '<li>' + esc(str(it, '')) + '</li>';
+        }).join('');
+      }
+
+      function renderHeroTeacher(s) {
+        var wrap = document.getElementById('heroTeacher');
+        if (!wrap) return;
+        var teacherName = tr(s, 'teacherName') || t('loading_teacher');
+        var role = tr(s, 'teacherRole') || t('teacher_role_default');
+        var img = s.teacherImage || 'assets/images/teacher.png';
+        wrap.innerHTML =
+          '<div class="hero-teacher-card">' +
+            '<img class="hero-teacher-img" src="' + esc(img) + '" alt="' + esc(teacherName) + ' — ' + esc(t('teacher_photo_alt')) + '" loading="eager" ' +
+            'onerror="this.style.display=\'none\'; this.parentElement.style.background=\'linear-gradient(135deg, var(--navy-3), var(--navy))\';" />' +
+            '<div class="hero-teacher-badge">' +
+              '<div class="name">' + esc(teacherName) + '</div>' +
+              '<div class="role">' + esc(role) + '</div>' +
+            '</div>' +
+          '</div>';
+      }
+
+      /* ---------- 5. SUCCESS RATE ---------- */
+      function applySuccessRate(rate, desc) {
+        var numEl = document.getElementById('successNum');
+        var descEl = document.getElementById('successDesc');
+        var ring = document.getElementById('successRing');
+
+        var pct = parseFloat(rate);
+        if (isNaN(pct)) pct = 0;
+        if (pct < 0) pct = 0;
+        if (pct > 100) pct = 100;
+
+        if (descEl) descEl.textContent = str(desc, t('success_default_desc'));
+
+        if (successAnimated) {
+          // Already animated once; just update the final value + ring
+          numEl.textContent = Math.round(pct);
+          ring.style.setProperty('--pct', pct);
+          return;
+        }
+
+        ring.style.setProperty('--pct', '0');
+        ring.dataset.target = pct;
+
+        if ('IntersectionObserver' in window) {
+          var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                animateCounter(numEl, 0, pct, 1600);
+                animateRing(ring, 0, pct, 1600);
+                successAnimated = true;
+                obs.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.35 });
+          obs.observe(ring);
+        } else {
+          numEl.textContent = Math.round(pct);
+          ring.style.setProperty('--pct', pct);
+          successAnimated = true;
+        }
+      }
+
+      function animateCounter(el, from, to, duration) {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          el.textContent = Math.round(to);
+          return;
+        }
+        var start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var progress = Math.min((ts - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(from + (to - from) * eased);
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      function animateRing(el, from, to, duration) {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          el.style.setProperty('--pct', to);
+          return;
+        }
+        var start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var progress = Math.min((ts - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          el.style.setProperty('--pct', (from + (to - from) * eased));
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      /* ---------- 6. CONTACT INFO ---------- */
+      function applyContactInfo(s) {
+        var contact = s.contact || {};
+        var phoneRow = document.getElementById('contactPhoneRow');
+        var addrRow  = document.getElementById('contactAddressRow');
+        var emailRow = document.getElementById('contactEmailRow');
+
+        if (contact.phone) {
+          setText('contactPhone', contact.phone);
+          phoneRow.removeAttribute('hidden');
+        }
+        if (contact.address || contact.address_en) {
+          setText('contactAddress', tr(contact, 'address'));
+          addrRow.removeAttribute('hidden');
+        }
+        if (contact.email) {
+          setText('contactEmail', contact.email);
+          emailRow.removeAttribute('hidden');
+        }
+
+        var wa = s.whatsapp || {};
+        if (wa.number) {
+          setText('contactWhatsapp', '+' + String(wa.number).replace(/[^\d]/g, ''));
+        }
+
+        renderSocials(s.social);
+      }
+
+      function renderSocials(social) {
+        if (!social) return;
+        var ICON_FB = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>';
+        var ICON_YT = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>';
+        var ICON_IG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>';
+
+        var html = '';
+        if (social.facebook) html += socialLinkHTML(social.facebook, ICON_FB, 'Facebook');
+        if (social.youtube)  html += socialLinkHTML(social.youtube, ICON_YT, 'YouTube');
+        if (social.instagram)html += socialLinkHTML(social.instagram, ICON_IG, 'Instagram');
+        if (!html) return;
+
+        var contactSocials = document.getElementById('contactSocials');
+        if (contactSocials) {
+          contactSocials.innerHTML = html;
+          contactSocials.removeAttribute('hidden');
+        }
+        var footerSocials = document.getElementById('footerSocials');
+        if (footerSocials) {
+          footerSocials.innerHTML = '<div class="footer-socials" style="display:flex;gap:10px;">' + html + '</div>';
+        }
+      }
+
+      function socialLinkHTML(url, icon, label) {
+        if (!url) return '';
+        return '<a href="' + esc(url) + '" class="social-link" target="_blank" rel="noopener" aria-label="' + esc(label) + '">' + icon + '</a>';
+      }
+
+      /* ---------- 7. HERO SLIDER ---------- */
+      function processBanners(data) {
+        var list = [];
+        if (data && Array.isArray(data.banners)) {
+          list = data.banners.filter(function (b) { return b && b.enabled !== false; });
+        } else if (data && Array.isArray(data)) {
+          list = data.filter(function (b) { return b && b.enabled !== false; });
+        }
+        list.sort(function (a, b) {
+          var oa = (a.order === undefined) ? 999 : a.order;
+          var ob = (b.order === undefined) ? 999 : b.order;
+          return oa - ob;
+        });
+        return list;
+      }
+
+      function renderHeroSlider(banners) {
+        STATE.banners = banners;
+        var heroContent = document.getElementById('heroContent');
+        var heroBg = document.getElementById('heroBg');
+        var heroDots = document.getElementById('heroDots');
+        var heroSection = document.getElementById('home');
+
+        if (!banners || banners.length === 0) {
+          renderDefaultHero(heroContent, heroBg, heroDots, heroSection);
+          return;
+        }
+
+        var bgHTML = '';
+        banners.forEach(function (b, i) {
+          var img = b.image || b.backgroundImage || '';
+          bgHTML += '<div class="hero-bg-layer' + (i === 0 ? ' active' : '') + '"' +
+            (img ? ' style="background-image:url(' + esc(img) + ')"' : '') +
+            ' aria-hidden="true"></div>';
+        });
+        heroBg.innerHTML = bgHTML;
+
+        var slidesHTML = '';
+        banners.forEach(function (b, i) {
+          var title = tr(b, 'title');
+          var subtitle = tr(b, 'subtitle');
+          var desc = tr(b, 'description');
+          var btnText = tr(b, 'buttonText');
+          var btnLink = str(b.buttonLink, '');
+          var waMsg = tr(b, 'whatsappMessage');
+
+          var actionsHTML = '';
+          var wa = STATE.settings && STATE.settings.whatsapp ? STATE.settings.whatsapp : null;
+
+          if (btnText) {
+            if (btnLink) {
+              actionsHTML += '<a href="' + esc(btnLink) + '" class="btn btn--gold">' + esc(btnText) + '</a>';
+            } else if (wa && wa.number) {
+              var link = buildWhatsappLink(wa.number, waMsg || tr(wa, 'defaultMessage'));
+              actionsHTML += '<a href="' + esc(link) + '" class="btn btn--gold" target="_blank" rel="noopener">' + waIcon() + '<span>' + esc(btnText) + '</span></a>';
+            } else {
+              actionsHTML += '<a href="#contact" class="btn btn--gold">' + esc(btnText) + '</a>';
+            }
+          }
+
+          if (wa && wa.number) {
+            var waLink = buildWhatsappLink(wa.number, waMsg || tr(wa, 'defaultMessage'));
+            actionsHTML += '<a href="' + esc(waLink) + '" class="btn btn--outline" target="_blank" rel="noopener">' + waIcon() + '<span>' + esc(t('hero_whatsapp_contact')) + '</span></a>';
+          }
+
+          slidesHTML +=
+            '<div class="hero-slide-text' + (i === 0 ? ' active' : '') + '">' +
+              (subtitle ? '<div class="hero-eyebrow">' + esc(subtitle) + '</div>' : '') +
+              (title ? '<h1 class="hero-title">' + esc(title) + '</h1>' : '') +
+              (desc ? '<p class="hero-desc">' + esc(desc) + '</p>' : '') +
+              (actionsHTML ? '<div class="hero-actions">' + actionsHTML + '</div>' : '') +
+            '</div>';
+        });
+        heroContent.innerHTML = slidesHTML;
+
+        if (banners.length > 1) {
+          var dotsHTML = '';
+          banners.forEach(function (_, i) {
+            dotsHTML += '<button class="hero-dot' + (i === 0 ? ' active' : '') + '" data-slide="' + i + '" role="tab" aria-label="' + esc(t('hero_prev') + ' ' + (i + 1)) + '" aria-selected="' + (i === 0 ? 'true' : 'false') + '"></button>';
+          });
+          heroDots.innerHTML = dotsHTML;
+          heroDots.querySelectorAll('.hero-dot').forEach(function (dot) {
+            dot.addEventListener('click', function () {
+              goToSlide(parseInt(dot.getAttribute('data-slide'), 10));
+              restartAutoplay();
+            });
+          });
+          heroSection.classList.remove('hero-single');
+        } else {
+          heroDots.innerHTML = '';
+          heroSection.classList.add('hero-single');
+        }
+
+        SLIDER.index = 0;
+        startAutoplay();
+      }
+
+      function renderDefaultHero(content, bg, dots, section) {
+        var academyName = (STATE.settings && tr(STATE.settings, 'academyName')) ? tr(STATE.settings, 'academyName') : 'Learn To Live Academy';
+        var wa = STATE.settings && STATE.settings.whatsapp ? STATE.settings.whatsapp : null;
+        var actionsHTML = '';
+        if (wa && wa.number) {
+          var link = buildWhatsappLink(wa.number, tr(wa, 'defaultMessage'));
+          actionsHTML += '<a href="' + esc(link) + '" class="btn btn--gold" target="_blank" rel="noopener">' + waIcon() + '<span>' + esc(t('hero_whatsapp_contact')) + '</span></a>';
+        }
+        actionsHTML += '<a href="#courses" class="btn btn--outline">' + esc(t('hero_view_courses')) + '</a>';
+
+        content.innerHTML =
+          '<div class="hero-slide-text active">' +
+            '<div class="hero-eyebrow">' + esc(t('hero_default_eyebrow')) + '</div>' +
+            '<h1 class="hero-title">' + esc(academyName) + '</h1>' +
+            '<p class="hero-desc">' + esc(t('hero_default_desc')) + '</p>' +
+            '<div class="hero-actions">' + actionsHTML + '</div>' +
+          '</div>';
+
+        bg.innerHTML = '';
+        dots.innerHTML = '';
+        section.classList.add('hero-single');
+      }
+
+      function waIcon() {
+        return '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>';
+      }
+
+      function goToSlide(idx) {
+        var total = STATE.banners.length;
+        if (total === 0) return;
+        if (idx < 0) idx = total - 1;
+        if (idx >= total) idx = 0;
+
+        var layers = document.querySelectorAll('.hero-bg-layer');
+        var texts  = document.querySelectorAll('.hero-slide-text');
+        var dots   = document.querySelectorAll('.hero-dot');
+
+        layers.forEach(function (el, i) { el.classList.toggle('active', i === idx); });
+        texts.forEach(function (el, i) { el.classList.toggle('active', i === idx); });
+        dots.forEach(function (el, i) {
+          el.classList.toggle('active', i === idx);
+          el.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+        });
+        SLIDER.index = idx;
+      }
+
+      function nextSlide() { goToSlide(SLIDER.index + 1); }
+      function prevSlide() { goToSlide(SLIDER.index - 1); }
+
+      function startAutoplay() {
+        if (STATE.banners.length <= 1) return;
+        stopAutoplay();
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        SLIDER.timer = setInterval(nextSlide, SLIDER.interval);
+      }
+      function stopAutoplay() {
+        if (SLIDER.timer) { clearInterval(SLIDER.timer); SLIDER.timer = null; }
+      }
+      function restartAutoplay() { stopAutoplay(); startAutoplay(); }
+
+      function bindSliderControls() {
+        var prev = document.getElementById('heroPrev');
+        var next = document.getElementById('heroNext');
+        if (prev) prev.addEventListener('click', function () { prevSlide(); restartAutoplay(); });
+        if (next) next.addEventListener('click', function () { nextSlide(); restartAutoplay(); });
+
+        var hero = document.getElementById('home');
+        if (hero) {
+          hero.addEventListener('mouseenter', stopAutoplay);
+          hero.addEventListener('mouseleave', startAutoplay);
+          hero.addEventListener('touchstart', stopAutoplay, { passive: true });
+          hero.addEventListener('touchend', function () { setTimeout(startAutoplay, 4000); }, { passive: true });
+        }
+
+        var touchStartX = 0;
+        if (hero) {
+          hero.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+          }, { passive: true });
+          hero.addEventListener('touchend', function (e) {
+            var endX = e.changedTouches[0].screenX;
+            var diff = touchStartX - endX;
+            if (Math.abs(diff) > 50) {
+              if (diff > 0) nextSlide(); else prevSlide();
+              restartAutoplay();
+            }
+          }, { passive: true });
+        }
+
+        document.addEventListener('keydown', function (e) {
+          var heroEl = document.getElementById('home');
+          if (!heroEl) return;
+          var rect = heroEl.getBoundingClientRect();
+          if (rect.top >= window.innerHeight || rect.bottom <= 0) return;
+          if (e.key === 'ArrowLeft')  { prevSlide(); restartAutoplay(); }
+          if (e.key === 'ArrowRight') { nextSlide(); restartAutoplay(); }
+        });
+      }
+
+      /* ---------- 8. COURSES ---------- */
+      function processCourses(data) {
+        var list = [];
+        if (data && Array.isArray(data.courses)) {
+          list = data.courses.filter(function (c) { return c && c.enabled !== false; });
+        } else if (data && Array.isArray(data)) {
+          list = data.filter(function (c) { return c && c.enabled !== false; });
+        }
+        list.sort(function (a, b) {
+          var oa = (a.order === undefined) ? 999 : a.order;
+          var ob = (b.order === undefined) ? 999 : b.order;
+          return oa - ob;
+        });
+        return list;
+      }
+
+      function renderCourses(courses) {
+        STATE.courses = courses;
+        var grid = document.getElementById('coursesGrid');
+        if (!grid) return;
+
+        if (!courses || courses.length === 0) {
+          grid.innerHTML =
+            '<div class="courses-empty">' +
+              '<p style="font-size:1.1rem; font-weight:600; color:var(--heading); margin-bottom:6px;">' + esc(t('courses_empty_title')) + '</p>' +
+              '<p>' + esc(t('courses_empty_msg')) + '</p>' +
+            '</div>';
+          return;
+        }
+
+        var html = courses.map(function (c) {
+          var title = tr(c, 'title') || t('loading_course');
+          var cls = tr(c, 'class') || tr(c, 'grade');
+          var subject = tr(c, 'subject');
+          var img = c.image || c.courseImage || '';
+          var duration = tr(c, 'duration');
+          var schedule = tr(c, 'weeklySchedule') || tr(c, 'schedule');
+          var perClass = tr(c, 'perClassDuration') || tr(c, 'classDuration');
+          var desc = tr(c, 'description');
+          var waMsg = tr(c, 'whatsappMessage');
+
+          // Auto-generate WhatsApp message if not provided
+          if (!waMsg) {
+            var parts = [];
+            parts.push(STATE.lang === 'en' ? 'Hello.' : 'আসসালামু আলাইকুম।');
+            if (title) {
+              if (STATE.lang === 'en') parts.push('I would like to know about the ' + title + ' course.');
+              else parts.push('আমি "' + title + '" কোর্স সম্পর্কে জানতে চাই।');
+            }
+            if (cls) parts.push(t('wa_course_class') + ': ' + cls);
+            if (subject) parts.push(t('wa_course_subject') + ': ' + subject);
+            parts.push(t('wa_course_detail_req'));
+            waMsg = parts.join(' ');
+          }
+
+          var wa = STATE.settings && STATE.settings.whatsapp ? STATE.settings.whatsapp : null;
+          var waBtn;
+          if (wa && wa.number) {
+            var waLink = buildWhatsappLink(wa.number, waMsg);
+            waBtn = '<a href="' + esc(waLink) + '" class="btn btn--whatsapp course-btn" target="_blank" rel="noopener">' + waIcon() + '<span>' + esc(t('courses_btn_whatsapp')) + '</span></a>';
+          } else {
+            waBtn = '<a href="#contact" class="btn btn--ghost course-btn">' + esc(t('courses_btn_contact')) + '</a>';
+          }
+
+          var tagsHTML = '';
+          if (cls)     tagsHTML += '<span class="course-tag">' + esc(cls) + '</span>';
+          if (subject) tagsHTML += '<span class="course-tag">' + esc(subject) + '</span>';
+
+          var imgHTML;
+          if (img) {
+            imgHTML = '<img class="course-img" src="' + esc(img) + '" alt="' + esc(title) + ' — ' + esc(t('courses_img_alt')) + '" loading="lazy" ' +
+              'onerror="this.style.display=\'none\'; var fb=this.nextElementSibling; if(fb){fb.style.display=\'flex\';}" />' +
+              '<div class="course-img-fallback" style="display:none;">' + esc(title ? title.charAt(0) : '?') + '</div>';
+          } else {
+            imgHTML = '<div class="course-img-fallback">' + esc(title ? title.charAt(0) : '?') + '</div>';
+          }
+
+          var metaHTML = '';
+          if (duration || schedule || perClass) {
+            metaHTML = '<div class="course-meta">';
+            if (duration) {
+              metaHTML += '<div class="course-meta-item"><span class="m-label">' + esc(t('courses_meta_duration')) + '</span><span class="m-value">' + esc(duration) + '</span></div>';
+            }
+            if (schedule) {
+              metaHTML += '<div class="course-meta-item"><span class="m-label">' + esc(t('courses_meta_schedule')) + '</span><span class="m-value">' + esc(schedule) + '</span></div>';
+            }
+            if (perClass) {
+              metaHTML += '<div class="course-meta-item"><span class="m-label">' + esc(t('courses_meta_perclass')) + '</span><span class="m-value">' + esc(perClass) + '</span></div>';
+            }
+            metaHTML += '</div>';
+          }
+
+          return (
+            '<article class="course-card reveal">' +
+              '<div class="course-img-wrap">' +
+                imgHTML +
+                (tagsHTML ? '<div class="course-tags">' + tagsHTML + '</div>' : '') +
+              '</div>' +
+              '<div class="course-body">' +
+                '<h3 class="course-title">' + esc(title) + '</h3>' +
+                (subject ? '<div class="course-subject">' + esc(subject) + '</div>' : '') +
+                (desc ? '<p class="course-desc">' + esc(desc) + '</p>' : '') +
+                metaHTML +
+                '<div class="course-footer">' + waBtn + '</div>' +
+              '</div>' +
+            '</article>'
+          );
+        }).join('');
+
+        grid.innerHTML = html;
+        triggerReveal();
+      }
+
+      /* ---------- 9. IMAGE ERROR HANDLER ---------- */
+      function handleImgError(img, fallbackText) {
+        img.addEventListener('error', function () {
+          var wrap = img.parentElement;
+          if (!wrap) return;
+          if (img.classList.contains('nav-logo')) {
+            var fb2 = document.createElement('span');
+            fb2.className = 'nav-logo-fallback';
+            fb2.textContent = fallbackText || 'L';
+            img.replaceWith(fb2);
+            return;
+          }
+          var fb = document.createElement('div');
+          fb.className = 'course-img-fallback';
+          fb.textContent = fallbackText || '?';
+          img.style.display = 'none';
+          wrap.appendChild(fb);
+        });
+      }
+
+      /* ---------- 10. NAVBAR & MOBILE MENU ---------- */
+      function bindNavbar() {
+        var navbar = document.getElementById('navbar');
+        var toggle = document.getElementById('navToggle');
+        var menu   = document.getElementById('mobileMenu');
+        var backdrop = document.getElementById('menuBackdrop');
+
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 10) navbar.classList.add('scrolled');
+          else navbar.classList.remove('scrolled');
+        }, { passive: true });
+
+        function openMenu() {
+          menu.classList.add('open');
+          backdrop.removeAttribute('hidden');
+          backdrop.classList.add('open');
+          toggle.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+          document.body.classList.add('menu-open');
+        }
+        function closeMenu() {
+          menu.classList.remove('open');
+          backdrop.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('menu-open');
+          setTimeout(function () { backdrop.setAttribute('hidden', ''); }, 350);
+        }
+
+        toggle.addEventListener('click', function () {
+          if (menu.classList.contains('open')) closeMenu(); else openMenu();
+        });
+        backdrop.addEventListener('click', closeMenu);
+        menu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeMenu);
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && menu.classList.contains('open')) {
+            closeMenu();
+            toggle.focus();
+          }
+        });
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768 && menu.classList.contains('open')) closeMenu();
+        });
+
+        // Active section indicator
+        var sections = ['home', 'teacher', 'courses', 'success', 'contact'];
+        var navLinks = document.querySelectorAll('.nav-link');
+        var mobileLinks = menu.querySelectorAll('a[href^="#"]');
+
+        if ('IntersectionObserver' in window) {
+          var sectionObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                var id = entry.target.id;
+                navLinks.forEach(function (l) {
+                  l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+                });
+                mobileLinks.forEach(function (l) {
+                  l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+                });
+              }
+            });
+          }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+          sections.forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) sectionObs.observe(el);
+          });
+        }
+
+        // Smooth scroll safety net
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            var href = link.getAttribute('href');
+            if (!href || href === '#') return;
+            var target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              history.replaceState(null, '', href);
+            }
+          });
+        });
+      }
+
+      /* ---------- 11. THEME + LANG TOGGLE BINDING ---------- */
+      function bindToggles() {
+        // Language buttons (both desktop + mobile)
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            setLang(btn.getAttribute('data-lang'));
+          });
+        });
+
+        // Theme buttons (desktop + mobile)
+        var themeBtns = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')];
+        themeBtns.forEach(function (btn) {
+          if (!btn) return;
+          btn.addEventListener('click', function () {
+            setTheme(STATE.theme === 'dark' ? 'light' : 'dark');
+          });
+        });
+
+        // Sync lang toggle visual state on init
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === STATE.lang ? 'true' : 'false');
+        });
+      }
+
+      /* ---------- 12. REVEAL ANIMATIONS ---------- */
+      function triggerReveal() {
+        var reveals = document.querySelectorAll('.reveal:not(.in)');
+        if (!('IntersectionObserver' in window)) {
+          reveals.forEach(function (el) { el.classList.add('in'); });
+          return;
+        }
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+        reveals.forEach(function (el) { obs.observe(el); });
+      }
+
+      /* ---------- 13. ERROR NOTICE ---------- */
+      function showErrorNotice(message) {
+        var existing = document.getElementById('loadNotice');
+        if (existing) return;
+        var div = document.createElement('div');
+        div.id = 'loadNotice';
+        div.className = 'err-notice';
+        div.setAttribute('role', 'alert');
+        div.textContent = message;
+        var main = document.getElementById('main');
+        main.insertBefore(div, main.firstChild);
+      }
+
+      /* ---------- 14. RENDER ALL (re-render on lang change) ---------- */
+      function renderAll() {
+        if (STATE.settings) {
+          applySettings(STATE.settings);
+        }
+        renderHeroSlider(STATE.banners);
+        renderCourses(STATE.courses);
+        triggerReveal();
+      }
+
+      /* ---------- 15. INIT ---------- */
+      function setYear() {
+        var y = document.getElementById('year');
+        if (y) y.textContent = new Date().getFullYear();
+      }
+
+      function getInitialLang() {
+        try {
+          var saved = localStorage.getItem('l2l-lang');
+          if (saved === 'en' || saved === 'bn') return saved;
+        } catch (e) {}
+        return 'bn';
+      }
+
+      function init() {
+        setYear();
+        STATE.lang = getInitialLang();
+
+        bindNavbar();
+        bindToggles();
+        bindSliderControls();
+        applyI18n();
+        triggerReveal();
+
+        fetchJSON('data/settings.json')
+          .then(function (data) {
+            applySettings(data || {});
+            return Promise.all([
+              fetchJSON('data/banners.json').catch(function () { return null; }),
+              fetchJSON('data/courses.json').catch(function () { return null; })
+            ]);
+          })
+          .then(function (results) {
+            var bannerData = results[0];
+            var courseData = results[1];
+
+            if (!bannerData) {
+              renderHeroSlider([]);
+            } else {
+              renderHeroSlider(processBanners(bannerData));
+            }
+
+            if (!courseData) {
+              renderCourses([]);
+              showErrorNotice(t('error_courses'));
+            } else {
+              renderCourses(processCourses(courseData));
+            }
+
+            triggerReveal();
+          })
+          .catch(function (err) {
+            console.warn('Settings load failed:', err && err.message);
+            applySettings({
+              academyName: 'Learn To Live Academy',
+              teacherName: '',
+              whatsapp: { number: '', defaultMessage: '' }
+            });
+            renderHeroSlider([]);
+            renderCourses([]);
+            showErrorNotice(t('error_general'));
+            triggerReveal();
+          });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+</html>

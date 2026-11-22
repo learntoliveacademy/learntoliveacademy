@@ -1,0 +1,53 @@
+{
+  "academyName": "Learn To Live Academy",
+  "academyName_en": "Learn To Live Academy",
+  "logo": "assets/images/logo.png",
+  "teacherName": "মোহাম্মদ রফিকুল ইসলাম",
+  "teacherName_en": "Md. Rafiqul Islam",
+  "teacherRole": "প্রধান শিক্ষক ও প্রতিষ্ঠাতা",
+  "teacherRole_en": "Head Teacher & Founder",
+  "teacherImage": "assets/images/teacher.png",
+  "qualification": "এম.এসসি (গণিত), বি.এড",
+  "qualification_en": "M.Sc (Mathematics), B.Ed",
+  "teachingExperience": "১৮ বছর",
+  "teachingExperience_en": "18 Years",
+  "introduction": "আমি মোহাম্মদ রফিকুল ইসলাম, গণিত শিক্ষায় ১৮ বছরের অভিজ্ঞতা সম্পন্ন একজন নিবেদিতপ্রাণ শিক্ষক। শিক্ষার্থীদের ধারণা পরিষ্কার করা এবং তাদের আত্মবিশ্বাস গড়ে তোলাই আমার শিক্ষাদানের মূল লক্ষ্য।",
+  "introduction_en": "I am Md. Rafiqul Islam, a dedicated teacher with 18 years of experience in mathematics education. My primary goal is to clarify concepts for students and build their confidence.",
+  "teachingPhilosophy": "শিক্ষা শুধু পাঠদান নয়, এটি শিক্ষার্থীর মনে জিজ্ঞাসা জাগানো এবং তাকে নিজের সক্ষমতা বিশ্বাস করতে শেখানোর প্রক্রিয়া।",
+  "teachingPhilosophy_en": "Education is not merely teaching — it is the process of awakening curiosity in a student's mind and teaching them to believe in their own ability.",
+  "highlights": [
+    "শিক্ষার্থীভিত্তিক ব্যক্তিগত যত্ন",
+    "পরিষ্কার ধারণাভিত্তিক পাঠদান",
+    "নিয়মিত মূল্যায়ন ও প্রতিক্রিয়া",
+    "ছোট ক্লাসে বেশি মনোযোগ",
+    "আধুনিক শিক্ষণ পদ্ধতি"
+  ],
+  "highlights_en": [
+    "Personalized student-centered care",
+    "Clear concept-based teaching",
+    "Regular assessment and feedback",
+    "More attention in small classes",
+    "Modern teaching methods"
+  ],
+  "successRate": 95,
+  "successDescription": "গত পাঁচ বছরে আমাদের শিক্ষার্থীদের অধিকাংশই তাদের লক্ষ্য অর্জনে সক্ষম হয়েছে। আমরা প্রতিটি শিক্ষার্থীর ব্যক্তিগত বিষয়ে মনোযোগ দিয়ে তাদের সাফল্য নিশ্চিত করি।",
+  "successDescription_en": "Over the past five years, most of our students have achieved their goals. We focus on each student's individual needs to ensure their success.",
+  "whatsapp": {
+    "number": "8801712345678",
+    "defaultMessage": "আসসালামু আলাইকুম। আমি Learn To Live Academy সম্পর্কে জানতে চাই।",
+    "defaultMessage_en": "Hello. I would like to know more about Learn To Live Academy."
+  },
+  "contact": {
+    "phone": "+8801712345678",
+    "address": "১২৩ মুন্সিগঞ্জ রোড, ঢাকা, বাংলাদেশ",
+    "address_en": "123 Munshiganj Road, Dhaka, Bangladesh",
+    "email": "info@learntolive.academy"
+  },
+  "social": {
+    "facebook": "https://facebook.com/learntolive",
+    "youtube": "https://youtube.com/@learntolive",
+    "instagram": "https://instagram.com/learntolive"
+  },
+  "footerText": "একটি প্রিমিয়াম টিউশন একাডেমি যেখানে শিক্ষার্থীদের সাফল্যই আমাদের মূল লক্ষ্য। আমরা ব্যক্তিগত যত্ন, ধারণাভিত্তিক পাঠদান এবং আধুনিক শিক্ষণ পদ্ধতির মাধ্যমে শিক্ষার্থীদের ভবিষ্যত গড়তে প্রতিশ্রুতিবদ্ধ।",
+  "footerText_en": "A premium tuition academy where student success is our primary goal. We are committed to building students' futures through personal care, concept-based teaching, and modern methods."
+}

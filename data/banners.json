@@ -1,0 +1,50 @@
+{
+  "banners": [
+    {
+      "id": 1,
+      "title": "শিক্ষার্থীদের সাফল্যই আমাদের পরিচয়",
+      "title_en": "Student success is our identity",
+      "subtitle": "প্রিমিয়াম টিউশন একাডেমি",
+      "subtitle_en": "Premium Tuition Academy",
+      "description": "অভিজ্ঞ শিক্ষক, কার্যকরী কোর্স এবং সাফল্যের নিশ্চয়তা। আপনার সন্তানের উজ্জ্বল ভবিষ্যতের সঠিক পথপ্রদর্শক আমরা।",
+      "description_en": "Experienced teacher, effective courses, and a promise of success. We are the right guide for your child's bright future.",
+      "image": "assets/images/banners/banner1.jpg",
+      "buttonText": "আজই যোগাযোগ করুন",
+      "buttonText_en": "Contact Today",
+      "buttonLink": "#contact",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "title": "ব্যক্তিগত যত্নে শেখানো হয়",
+      "title_en": "Taught with personal care",
+      "subtitle": "ছোট ক্লাস, বড় সাফল্য",
+      "subtitle_en": "Small classes, big success",
+      "description": "প্রতিটি শিক্ষার্থীর প্রতি আলাদা মনোযোগ দিয়ে আমরা নিশ্চিত করি তাদের ধারণা পরিষ্কার ও স্থায়ী হয়।",
+      "description_en": "With individual attention to every student, we ensure their concepts are clear and lasting.",
+      "image": "assets/images/banners/banner2.jpg",
+      "buttonText": "হোয়াটসঅ্যাপে যোগাযোগ",
+      "buttonText_en": "Contact on WhatsApp",
+      "whatsappMessage": "আমি আপনাদের পড়ানোর পদ্ধতি সম্পর্কে জানতে চাই।",
+      "whatsappMessage_en": "I would like to know about your teaching method.",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "id": 3,
+      "title": "গণিত, বিজ্ঞান ও ইংরেজিতে বিশেষ কোর্স",
+      "title_en": "Special courses in Math, Science & English",
+      "subtitle": "শ্রেণি ৬ — ১২",
+      "subtitle_en": "Class 6 — 12",
+      "description": "ধারণাভিত্তিক পাঠদান, নিয়মিত মূল্যায়ন এবং আধুনিক শিক্ষণ পদ্ধতির মাধ্যমে শিক্ষার্থীদের প্রস্তুত করি পরবর্তী ধাপের জন্য।",
+      "description_en": "Through concept-based teaching, regular assessment, and modern methods, we prepare students for the next step.",
+      "image": "assets/images/banners/banner3.jpg",
+      "buttonText": "কোর্স দেখুন",
+      "buttonText_en": "View Courses",
+      "buttonLink": "#courses",
+      "enabled": true,
+      "order": 3
+    }
+  ]
+}

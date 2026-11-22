@@ -1,0 +1,140 @@
+{
+  "courses": [
+    {
+      "id": "math910",
+      "title": "উচ্চতর গণিত",
+      "title_en": "Higher Mathematics",
+      "class": "শ্রেণি ৯–১০",
+      "class_en": "Class 9–10",
+      "subject": "গণিত",
+      "subject_en": "Mathematics",
+      "image": "assets/images/courses/math.jpg",
+      "duration": "১২ মাস",
+      "duration_en": "12 Months",
+      "weeklySchedule": "শনি, সোম, বুধ",
+      "weeklySchedule_en": "Sat, Mon, Wed",
+      "perClassDuration": "১.৫ ঘণ্টা",
+      "perClassDuration_en": "1.5 Hours",
+      "description": "জাতীয় পাঠ্যক্রম অনুযায়ী গণিতের পূর্ণাঙ্গ কোর্স। বীজগণিত, জ্যামিতি, ত্রিকোণমিতি ও পরিমিতি — প্রতিটি অধ্যায়ে ধারণা পরিষ্কার ও সমস্যা সমাধানের কৌশল।",
+      "description_en": "A complete mathematics course following the national curriculum. Algebra, geometry, trigonometry, and mensuration — clear concepts and problem-solving techniques in every chapter.",
+      "topics": [
+        "বীজগণিত",
+        "জ্যামিতি",
+        "ত্রিকোণমিতি",
+        "পরিমিতি"
+      ],
+      "topics_en": [
+        "Algebra",
+        "Geometry",
+        "Trigonometry",
+        "Mensuration"
+      ],
+      "whatsappMessage": "আমি শ্রেণি ৯–১০ এর উচ্চতর গণিত কোর্স সম্পর্কে জানতে চাই।",
+      "whatsappMessage_en": "I would like to know about the Class 9–10 Higher Mathematics course.",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": "science910",
+      "title": "পদার্থ ও রসায়ন",
+      "title_en": "Physics & Chemistry",
+      "class": "শ্রেণি ৯–১০",
+      "class_en": "Class 9–10",
+      "subject": "বিজ্ঞান",
+      "subject_en": "Science",
+      "image": "assets/images/courses/science.jpg",
+      "duration": "১২ মাস",
+      "duration_en": "12 Months",
+      "weeklySchedule": "রবি, মঙ্গল, বৃহঃ",
+      "weeklySchedule_en": "Sun, Tue, Thu",
+      "perClassDuration": "১.৫ ঘণ্টা",
+      "perClassDuration_en": "1.5 Hours",
+      "description": "পদার্থবিজ্ঞান ও রসায়নের মৌলিক ধারণা ও পরীক্ষাভিত্তিক ব্যবহারিক প্রয়োগ। সহজ ভাষায় জটিল বিষয় বুঝিয়ে দেওয়া হয়।",
+      "description_en": "Fundamental concepts of physics and chemistry with exam-focused practical applications. Complex topics are explained in simple language.",
+      "topics": [
+        "বল ও গতি",
+        "পদার্থের গঠন",
+        "রাসায়নিক বিক্রিয়া",
+        "শক্তি"
+      ],
+      "topics_en": [
+        "Force & Motion",
+        "Structure of Matter",
+        "Chemical Reactions",
+        "Energy"
+      ],
+      "whatsappMessage": "আমি শ্রেণি ৯–১০ এর বিজ্ঞান কোর্স সম্পর্কে জানতে চাই।",
+      "whatsappMessage_en": "I would like to know about the Class 9–10 Science course.",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "id": "english910",
+      "title": "ইংরেজি ভাষা ও ব্যাকরণ",
+      "title_en": "English Language & Grammar",
+      "class": "শ্রেণি ৯–১০",
+      "class_en": "Class 9–10",
+      "subject": "ইংরেজি",
+      "subject_en": "English",
+      "image": "assets/images/courses/english.jpg",
+      "duration": "১০ মাস",
+      "duration_en": "10 Months",
+      "weeklySchedule": "শুক্র, শনি",
+      "weeklySchedule_en": "Fri, Sat",
+      "perClassDuration": "২ ঘণ্টা",
+      "perClassDuration_en": "2 Hours",
+      "description": "গ্রামার, কম্পোজিশন ও স্পোকেন ইংলিশ — তিনটি বিভাগে সমন্বিত পাঠদান। পরীক্ষায় ভালো ফলাফলের পাশাপাশি বাস্তব ব্যবহারে সাবলীল হতে সাহায্য।",
+      "description_en": "Grammar, composition, and spoken English — integrated teaching across all three areas. Helps students excel in exams and become fluent in real-world usage.",
+      "topics": [
+        "Grammar",
+        "Composition",
+        "Reading",
+        "Speaking"
+      ],
+      "topics_en": [
+        "Grammar",
+        "Composition",
+        "Reading",
+        "Speaking"
+      ],
+      "whatsappMessage": "আমি শ্রেণি ৯–১০ এর ইংরেজি কোর্স সম্পর্কে জানতে চাই।",
+      "whatsappMessage_en": "I would like to know about the Class 9–10 English course.",
+      "enabled": true,
+      "order": 3
+    },
+    {
+      "id": "math1112",
+      "title": "একাদশ–দ্বাদশ গণিত",
+      "title_en": "Class 11–12 Mathematics",
+      "class": "একাদশ–দ্বাদশ",
+      "class_en": "Class 11–12",
+      "subject": "গণিত",
+      "subject_en": "Mathematics",
+      "image": "assets/images/courses/math.jpg",
+      "duration": "১৬ মাস",
+      "duration_en": "16 Months",
+      "weeklySchedule": "রবি, বুধ, শুক্র",
+      "weeklySchedule_en": "Sun, Wed, Fri",
+      "perClassDuration": "২ ঘণ্টা",
+      "perClassDuration_en": "2 Hours",
+      "description": "উচ্চতর মাধ্যমিক পর্যায়ের গণিত — ক্যালকুলাস, বীজগণিত ও জ্যামিতির গভীর বিশ্লেষণ। বোর্ড পরীক্ষা ও ভর্তি পরীক্ষা উভয়ের জন্য প্রস্তুতি।",
+      "description_en": "Higher secondary mathematics — in-depth analysis of calculus, algebra, and geometry. Preparation for both board exams and admission tests.",
+      "topics": [
+        "Calculus",
+        "Linear Algebra",
+        "Coordinate Geometry",
+        "Trigonometry"
+      ],
+      "topics_en": [
+        "Calculus",
+        "Linear Algebra",
+        "Coordinate Geometry",
+        "Trigonometry"
+      ],
+      "whatsappMessage": "আমি একাদশ–দ্বাদশ শ্রেণির গণিত কোর্স সম্পর্কে জানতে চাই।",
+      "whatsappMessage_en": "I would like to know about the Class 11–12 Mathematics course.",
+      "enabled": true,
+      "order": 4
+    }
+  ]
+}
