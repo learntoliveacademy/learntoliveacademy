@@ -10,7 +10,7 @@
 
   "teacherImage": "assets/images/teacher.png",
 
-  "qualification": "এম.এ (MA), বি.এড (B.Ed)",
+  "qualification": "এম.এ (MA)",
   "qualification_en": "MA, B.Ed",
 
   "teachingExperience": "১৩ বছর",
@@ -55,7 +55,7 @@
     "phone": "+919800543239",
     "address": "শুভাষ পল্লী, বর্ধমান, পশ্চিমবঙ্গ, ভারত",
     "address_en": "Subhas Palli, Burdwan, West Bengal, India",
-    "email": "info@learntolive.academy"
+    "email": "learntoliveacademy.official@gmail.com"
   },
 
   "social": {
