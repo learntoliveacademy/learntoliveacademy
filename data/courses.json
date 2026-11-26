@@ -3,8 +3,8 @@
   "courses": [
     {
       "id": "class9_wb",
-      "title": "নবম শ্রেণি বাংলা",
-      "title_en": "Class 9 Bengali",
+      "title": "নবম শ্রেণি বাংলা(WBBSE)",
+      "title_en": "Class 9 Bengali(WBBSE)",
       "class": "নবম শ্রেণি",
       "class_en": "Class 9",
       "subject": "বাংলা",
@@ -24,8 +24,8 @@
     },
     {
       "id": "class9_cbse",
-      "title": "নবম শ্রেণি বাংলা",
-      "title_en": "Class 9 Bengali",
+      "title": "নবম শ্রেণি বাংলা(CBSE)",
+      "title_en": "Class 9 Bengali(CBSE)",
       "class": "নবম শ্রেণি",
       "class_en": "Class 9",
       "subject": "বাংলা",
@@ -45,8 +45,8 @@
     },
     {
       "id": "class9_icse",
-      "title": "নবম শ্রেণি বাংলা",
-      "title_en": "Class 9 Bengali",
+      "title": "নবম শ্রেণি বাংলা(ICSE)",
+      "title_en": "Class 9 Bengali(ICSE)",
       "class": "নবম শ্রেণি",
       "class_en": "Class 9",
       "subject": "বাংলা",
@@ -66,8 +66,8 @@
     },
     {
       "id": "class10_wb",
-      "title": "দশম শ্রেণি বাংলা",
-      "title_en": "Class 10 Bengali",
+      "title": "দশম শ্রেণি বাংলা(WBBSE)",
+      "title_en": "Class 10 Bengali(WBBSE)",
       "class": "দশম শ্রেণি",
       "class_en": "Class 10",
       "subject": "বাংলা",
@@ -87,8 +87,8 @@
     },
     {
       "id": "class10_cbse",
-      "title": "দশম শ্রেণি বাংলা",
-      "title_en": "Class 10 Bengali",
+      "title": "দশম শ্রেণি বাংলা(CBSE)",
+      "title_en": "Class 10 Bengali(CBSE)",
       "class": "দশম শ্রেণি",
       "class_en": "Class 10",
       "subject": "বাংলা",
@@ -108,8 +108,8 @@
     },
     {
       "id": "class10_icse",
-      "title": "দশম শ্রেণি বাংলা",
-      "title_en": "Class 10 Bengali",
+      "title": "দশম শ্রেণি বাংলা(ICSE)",
+      "title_en": "Class 10 Bengali(ICSE)",
       "class": "দশম শ্রেণি",
       "class_en": "Class 10",
       "subject": "বাংলা",
