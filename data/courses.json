@@ -1,8 +1,8 @@
-
 {
   "courses": [
     {
       "id": "class9_wb",
+      "image": "assets/images/courses/class9-wb.jpg",
       "title": "নবম শ্রেণি বাংলা(WBBSE)",
       "title_en": "Class 9 Bengali(WBBSE)",
       "class": "নবম শ্রেণি",
@@ -24,6 +24,7 @@
     },
     {
       "id": "class9_cbse",
+      "image": "assets/images/courses/class9-cbse.jpg",
       "title": "নবম শ্রেণি বাংলা(CBSE)",
       "title_en": "Class 9 Bengali(CBSE)",
       "class": "নবম শ্রেণি",
@@ -45,6 +46,7 @@
     },
     {
       "id": "class9_icse",
+      "image": "assets/images/courses/class9-icse.jpg",
       "title": "নবম শ্রেণি বাংলা(ICSE)",
       "title_en": "Class 9 Bengali(ICSE)",
       "class": "নবম শ্রেণি",
@@ -66,6 +68,7 @@
     },
     {
       "id": "class10_wb",
+      "image": "assets/images/courses/class10-wb.jpg",
       "title": "দশম শ্রেণি বাংলা(WBBSE)",
       "title_en": "Class 10 Bengali(WBBSE)",
       "class": "দশম শ্রেণি",
@@ -87,6 +90,7 @@
     },
     {
       "id": "class10_cbse",
+      "image": "assets/images/courses/class10-cbse.jpg",
       "title": "দশম শ্রেণি বাংলা(CBSE)",
       "title_en": "Class 10 Bengali(CBSE)",
       "class": "দশম শ্রেণি",
@@ -108,6 +112,7 @@
     },
     {
       "id": "class10_icse",
+      "image": "assets/images/courses/class10-icse.jpg",
       "title": "দশম শ্রেণি বাংলা(ICSE)",
       "title_en": "Class 10 Bengali(ICSE)",
       "class": "দশম শ্রেণি",
@@ -129,6 +134,7 @@
     },
     {
       "id": "class11_wb",
+      "image": "assets/images/courses/class11-bengali.jpg",
       "title": "একাদশ শ্রেণি বাংলা",
       "title_en": "Class 11 Bengali",
       "class": "একাদশ শ্রেণি",
@@ -150,6 +156,7 @@
     },
     {
       "id": "class12_wb",
+      "image": "assets/images/courses/class12-bengali.jpg",
       "title": "দ্বাদশ শ্রেণি বাংলা",
       "title_en": "Class 12 Bengali",
       "class": "দ্বাদশ শ্রেণি",
@@ -171,6 +178,7 @@
     },
     {
       "id": "graduation_major",
+      "image": "assets/images/courses/graduation-major.jpg",
       "title": "স্নাতক বাংলা মেজর",
       "title_en": "Graduation Bengali Major",
       "class": "স্নাতক",
@@ -190,6 +198,7 @@
     },
     {
       "id": "graduation_minor",
+      "image": "assets/images/courses/graduation-minor.jpg",
       "title": "স্নাতক বাংলা মাইনর",
       "title_en": "Graduation Bengali Minor",
       "class": "স্নাতক",
@@ -209,6 +218,7 @@
     },
     {
       "id": "ma_regular",
+      "image": "assets/images/courses/ma-regular.jpg",
       "title": "বাংলায় স্নাতকোত্তর (নিয়মিত)",
       "title_en": "M.A. in Bengali (Regular)",
       "class": "স্নাতকোত্তর",
@@ -230,6 +240,7 @@
     },
     {
       "id": "ma_distance",
+      "image": "assets/images/courses/ma-distance.jpg",
       "title": "বাংলায় স্নাতকোত্তর (দূরশিক্ষা)",
       "title_en": "M.A. in Bengali (Distance)",
       "class": "স্নাতকোত্তর",
